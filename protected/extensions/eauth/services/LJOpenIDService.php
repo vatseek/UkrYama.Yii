@@ -44,6 +44,10 @@ class LJOpenIDService extends EOpenIDService {
 		//'birthDate' => array('dob', 'birthDate'),  
 	);
 	
+
+	$this->attributes['url'] = 'http://fezeev.livejournal.com';
+	$this->attributes['external_auth_id']='OPENID#http://www.livejournal.com/openid/server.bml';		
+
 	protected function fetchAttributes() {
 		//print_r($this->attributes); die();
 		//if (isset($this->attributes['username']) && !empty($this->attributes['username']))
