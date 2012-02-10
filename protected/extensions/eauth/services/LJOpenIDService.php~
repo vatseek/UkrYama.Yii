@@ -1,6 +1,6 @@
 <?php
 /**
- * LJOpenIDService class file.
+ * YandexOpenIDService class file.
  *
  * @author Maxim Zemskov <nodge@yandex.ru>
  * @link http://code.google.com/p/yii-eauth/
@@ -10,20 +10,19 @@
 require_once dirname(dirname(__FILE__)).'/EOpenIDService.php';
 
 /**
- * LJ provider class.
+ * Yandex provider class.
  * @package application.extensions.eauth.services
  */
 class LJOpenIDService extends EOpenIDService {
 	
 	protected $name = 'livejournal';
-	protected $title = 'LiveJournal';
+	protected $title = 'Livejournal';
 	protected $type = 'OpenID';
 	protected $jsArguments = array('popup' => array('width' => 900, 'height' => 550));
-	protected $login_id;
-	protected $autologin=false;
+	protected $login_id;	
+	protected $autologin=false;	
 
-	//protected $url='http://www.livejournal.com/openid/approve.bml';
-	protected $url = 'http://fezeev.livejournal.com';
+	protected $url='http://www.livejournal.com/openid/approve.bml';
 
     /*
 	protected function seturl(){
@@ -46,9 +45,8 @@ class LJOpenIDService extends EOpenIDService {
 	
 	protected function fetchAttributes() {
 		//print_r($this->attributes); die();
-		//if (isset($this->attributes['username']) && !empty($this->attributes['username']))
-		//	$this->attributes['url'] = $this->attributes['username'].'.livejournal.com';
-		$this->attributes['url'] = 'http://fezeev.livejournal.com';
+		if (isset($this->attributes['username']) && !empty($this->attributes['username']))
+			$this->attributes['url'] = $this->attributes['username'].'.livejournal.com';
 			
 		if (isset($this->attributes['birthDate']) && !empty($this->attributes['birthDate']))
 			$this->attributes['birthDate'] = strtotime($this->attributes['birthDate']);
