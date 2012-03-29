@@ -12,7 +12,7 @@
 		new TWTR.Widget({
 		version: 2,
 		type: 'search',
-		search: 'rosyama',
+		search: 'ukryama',
 		interval: 6000,
 		title: '',
 		subject: '',
@@ -42,11 +42,5 @@
 		}).render().start();
 	</script>
 	<div class="like">
-		<!-- Facebook like -->
-		<div id="fb_like">
-			<iframe src="http://www.facebook.com/plugins/like.php?href=http://<?php echo $_SERVER['SERVER_NAME'] ?>/&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px;" allowTransparency="true"></iframe>
-		</div>
-		<!-- Vkontakte like -->
-		<div id="vk_like"></div>
-		<script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", verb: 1});</script>
+
 	</div>
