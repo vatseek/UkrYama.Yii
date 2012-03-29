@@ -121,7 +121,7 @@
 			<?php if($this->beginCache('countHoles', array('duration'=>3600))) { ?>
 			<?php $this->widget('application.widgets.collection.collectionWidget'); ?>			
 			<?php $this->endCache(); } ?>
-			<p class="friends">Чиним ямы <a href="http://rosyama.com/">в России</a>, <a href="http://belyama.by/">Беларуси</a> и <a href="http://kazyama.kz/">Казахстане</a></p>
+			<p class="friends">Чиним ямы <a href="http://rosyama.ru/">в России</a>, <a href="http://belyama.by/">Беларуси</a> и <a href="http://kazyama.kz/">Казахстане</a></p>
 		</div>
 	</div>
 	
