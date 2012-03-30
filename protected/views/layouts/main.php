@@ -6,7 +6,7 @@
 <meta name="language" content="ru" />
 <meta name="copyright" content="rosyama" />
 <meta name="robots" content="index, follow" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/template_styles.css" />
@@ -41,7 +41,7 @@
 				array('label'=>'Нормативы', 'url'=>array('/site/page', 'view'=>'regulations')),
 				array('label'=>'Статистика', 'url'=>array('/statics/index')),
 				array('label'=>'FAQ', 'url'=>array('/site/page', 'view'=>'faq')),
-				array('label'=>'Справочники', 'url'=>array('/sprav/index')),
+				array('label'=>'Сообщество', 'url'=>array('/sprav/index')),
 				//array('label'=>'Logout ('.$this->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!$this->user->isGuest)
 			),
 			'htmlOptions'=>array('class'=>'menu'), 
@@ -112,7 +112,7 @@
 	<div class="footer">
 		<div class="container">
 			<p class="autochmo"><a target="_blank" href="http://autochmo.ru/" title="Доска позора водителей &aring;вточмо">&aring;utochmo</a><br>Доска позора водителей</p>
-			<p class="copy">&copy; <a href="http://navalny.ru/">Алексей Навальный</a>, 2011<br />
+			<p class="copy">Идея - <a href="http://navalny.ru/">Алексей Навальный</a>, 2011<br />
 			<a href="mailto:rossyama@gmail.com">rossyama@gmail.com</a><br />
 			<br/>Разработка прототипа и дизайна - <a href="http://greensight.ru">Greensight</a>.
 			<br />
@@ -125,7 +125,7 @@
 		</div>
 	</div>
 	
-	<script type="text/javascript">
+<!--	<script type="text/javascript">
                 var reformalOptions = {
                         project_id: 43983,
                         project_host: "rosyama.reformal.ru",
@@ -142,7 +142,7 @@
                         document.getElementsByTagName('head')[0].appendChild(script);
                 })();
         </script>
-               	
+               	-->
 	
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];

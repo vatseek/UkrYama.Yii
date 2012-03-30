@@ -271,7 +271,7 @@ class SpravController extends Controller
 	{
 	
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/hole_view.css'); 
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/hole_view.css'); 
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
        	$jsFile = CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'view_script.js');
         $cs->registerScriptFile($jsFile); 
@@ -300,7 +300,7 @@ class SpravController extends Controller
 		// $this->performAjaxValidation($model);
 		
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
         $jsFile = CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'ymap.js');
         $cs->registerScriptFile($jsFile);     
@@ -334,7 +334,7 @@ class SpravController extends Controller
 		
 		
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
         $jsFile = CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'ymap.js');
         $cs->registerScriptFile($jsFile);     

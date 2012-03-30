@@ -1,5 +1,5 @@
 <?
-$this->pageTitle=Yii::app()->name . ' :: Список дефектов';
+$this->pageTitle=Yii::app()->name;
 ?>
 <?php
 if(Yii::app()->user->isModer)
@@ -163,7 +163,7 @@ EOD
       'autoCompleteLength'=>60,
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
-      'defaultVal'=>'Субъект РФ',
+      'defaultVal'=>'Область',
       'cssClass'=>$model->ADR_SUBJECTRF ? '' : 'disabled',
       
       //'scriptFile'=>'jquery.autocomplete.js',      

@@ -5,7 +5,7 @@
 }
 
 	.holes_list li {
-		background: #fff url(/images/prop_bg.gif) repeat-x bottom;
+		background: #fff url(../images/prop_bg.gif) repeat-x bottom;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 		-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 		-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -60,7 +60,7 @@
 			}
 			
 			.holes_list .service i {
-				background: url(/images/fog.png) repeat-y;
+				background: url(../images/fog.png) repeat-y;
 				display: block;
 				height: 100%;
 				position: absolute;
