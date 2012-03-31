@@ -163,11 +163,8 @@ EOD
       'autoCompleteLength'=>60,
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
-<<<<<<< HEAD
       'defaultVal'=>'Область',
-=======
       'defaultVal'=>Yii::t("holes", "WIDGET_DEFAULT_REGION"),
->>>>>>> c113d351953878c928106f2e52cd3970cef525fe
       'cssClass'=>$model->ADR_SUBJECTRF ? '' : 'disabled',
       
       //'scriptFile'=>'jquery.autocomplete.js',      
