@@ -28,6 +28,17 @@
 							{
 								$('.grad').show()
 							}
+
+                        $(".change-language").click( function(){
+                            $lang = $(this).attr("lang");
+                            var theDate = new Date();
+                            var oneWeekLater = new Date(theDate.getTime() + 1000 * 60 * 60 * 24 * 100);
+                            var expiryDate = oneWeekLater.toString();
+
+                                document.cookie = 'prefLang=' + $lang + '; expires=' + expiryDate + '; path=/;';
+                                location.reload(true);
+
+                        })
 					})
 				</script>
 
@@ -36,18 +47,29 @@
 		<div class="container">
 			<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'О проекте', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Карта', 'url'=>array('/holes/map')),
-				array('label'=>'Нормативы', 'url'=>array('/site/page', 'view'=>'regulations')),
-				array('label'=>'Статистика', 'url'=>array('/statics/index')),
-				array('label'=>'FAQ', 'url'=>array('/site/page', 'view'=>'faq')),
-				array('label'=>'Справочники', 'url'=>array('/sprav/index')),
+				array('label'=>Yii::t("template", "MENU_TOP_ABOUT"), 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>Yii::t("template", "MENU_TOP_MAP"), 'url'=>array('/holes/map')),
+				array('label'=>Yii::t("template", "MENU_TOP_STANDARDS"), 'url'=>array('/site/page', 'view'=>'regulations')),
+				array('label'=>Yii::t("template", "MENU_TOP_STATISTICS"), 'url'=>array('/statics/index')),
+				array('label'=>Yii::t("template", "MENU_TOP_FAQ"), 'url'=>array('/site/page', 'view'=>'faq')),
+				array('label'=>Yii::t("template", "MENU_TOP_MANUALS"), 'url'=>array('/sprav/index')),
 				//array('label'=>'Logout ('.$this->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!$this->user->isGuest)
 			),
 			'htmlOptions'=>array('class'=>'menu'), 
 			'firstItemCssClass'=>'first',
 			'activeCssClass'=>'selected',
 		)); ?>
+
+            <div style="float: right; margin-right: 70px;padding-top: 3px; cursor: pointer;">
+
+                <?php if(Yii::app()->language == "ru"):?>
+                <img src="/images/flags/ua.png" alt="Українською" lang="ua" class="change-language">
+                 <?php else: ?>
+                 <img src="/images/flags/ru.png" alt="По-русски"  lang="ru" class="change-language">
+                     <?php endif;?>
+            </div>
+
+            
 			<div class="search">
 				<form action="/map">
 			<input type="image" name="s" src="<?php echo Yii::app()->request->baseUrl; ?>/images/search_btn.gif" class="btn" /><input type="text" class="textInput inactive" name="q"  value="Поиск по адресу" />
