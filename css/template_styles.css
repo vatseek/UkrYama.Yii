@@ -1104,5 +1104,6 @@ color: rgb(0, 128, 0);
 }
 
 .pager ul li{display:inline; margin-right: 1em;}
+.pager ul li.hidden {display: none;}
 .pager ul li.previous a,.pager ul li.next a {text-decoration:none; font-size: 1.33em; font-weight: bold;}
 .pager ul li.selected a {color:black; text-decoration:none;}
