@@ -1,5 +1,5 @@
 <?
-$this->pageTitle=Yii::app()->name . ' :: Список дефектов';
+$this->pageTitle=Yii::app()->name;
 ?>
 <?php
 if(Yii::app()->user->isModer)
@@ -163,7 +163,7 @@ EOD
       'autoCompleteLength'=>60,
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
-      'defaultVal'=>'Субъект РФ',
+      'defaultVal'=>'Область',
       'cssClass'=>$model->ADR_SUBJECTRF ? '' : 'disabled',
       
       //'scriptFile'=>'jquery.autocomplete.js',      
@@ -242,14 +242,21 @@ EOD
 <div class="rCol">
 
 <?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	'itemsTagName'=>'ul',
-	'cssFile'=>Yii::app()->request->baseUrl.'/css/holes_list.css',
-	'itemsCssClass'=>'holes_list',
-	'summaryText'=>false,
-	'viewData'=>Array('user'=>Yii::app()->user),
-	
+		'dataProvider'=>$dataProvider,
+		'itemView'=>'_view',
+		'itemsTagName'=>'ul',
+		'cssFile'=>Yii::app()->request->baseUrl.'/css/holes_list.css',
+		'itemsCssClass'=>'holes_list',
+		'summaryText'=>false,
+		'viewData'=>Array('user'=>Yii::app()->user),
+		'pager'=>array(
+			'lastPageLabel'=>false, 
+			'firstPageLabel'=>false, 
+			'nextPageLabel'=>'&rarr;',
+			'prevPageLabel'=>'&larr;',
+			'cssFile'=>false,
+			'header'=>false,
+		),
 )); ?>
 <?php if (Yii::app()->user->isModer && $model->NOT_PREMODERATED && $dataProvider->totalItemCount > 0) : ?>
 	<input type="button" id="all_right" value="Разрешить все дефекты" />

@@ -110,7 +110,7 @@ class HolesController extends Controller
 	public function actionView($id)
 	{
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/hole_view.css'); 
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/hole_view.css'); 
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
         $jsFile = CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'view_script.js');
         $cs->registerScriptFile($jsFile);
@@ -138,7 +138,7 @@ class HolesController extends Controller
 		// $this->performAjaxValidation($model);
 		
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
 
 		if(isset($_POST['Holes']))
 		{
@@ -153,8 +153,10 @@ class HolesController extends Controller
 			if (Yii::app()->user->level > 50) $model->PREMODERATED=1;
 			else $model->PREMODERATED=0;
 			
-			if($model->save() && $model->savePictures())
-				$this->redirect(array('view','id'=>$model->ID));
+			if ($model->validate()) {
+				if($model->save() && $model->savePictures())
+					$this->redirect(array('view','id'=>$model->ID));
+				}
 		}
 		else {
 		//выставляем центр на карте по координатам IP юзера
@@ -210,7 +212,7 @@ class HolesController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
 
 		if(isset($_POST['Holes']))
 		{
@@ -286,7 +288,7 @@ class HolesController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
 		
 		$this->render('gibddreply',array(
@@ -311,7 +313,7 @@ class HolesController extends Controller
 		$model->scenario='fix';
 		
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/add_form.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/add_form.css');
         $cs->registerScriptFile('http://api-maps.yandex.ru/1.1/index.xml?key='.$this->mapkey);
 
 		if(isset($_POST['Holes']))
@@ -717,8 +719,8 @@ class HolesController extends Controller
 		
 		
 		$cs=Yii::app()->getClientScript();
-        $cs->registerCssFile('/css/holes_list.css');
-		$cs->registerCssFile('/css/hole_view.css');
+        $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/holes_list.css');
+		$cs->registerCssFile(Yii::app()->request->baseUrl.'/css/hole_view.css');
         $cs->registerScriptFile(CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'holes_selector.js'));
 		$cs->registerScriptFile('http://www.vertstudios.com/vertlib.min.js');        
         $cs->registerScriptFile(CHtml::asset($this->viewPath.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'StickyScroller'.DIRECTORY_SEPARATOR.'StickyScroller.min.js'));
