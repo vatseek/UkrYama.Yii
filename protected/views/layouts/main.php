@@ -47,21 +47,18 @@
 		<div class="container">
 			<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-<<<<<<< HEAD
-				array('label'=>'О проекте', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Карта', 'url'=>array('/holes/map')),
-				array('label'=>'Нормативы', 'url'=>array('/site/page', 'view'=>'regulations')),
-				array('label'=>'Статистика', 'url'=>array('/statics/index')),
-				array('label'=>'FAQ', 'url'=>array('/site/page', 'view'=>'faq')),
-				array('label'=>'Сообщество', 'url'=>array('/sprav/index')),
-=======
+				//array('label'=>'О проекте', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Карта', 'url'=>array('/holes/map')),
+				//array('label'=>'Нормативы', 'url'=>array('/site/page', 'view'=>'regulations')),
+				//array('label'=>'Статистика', 'url'=>array('/statics/index')),
+				//array('label'=>'FAQ', 'url'=>array('/site/page', 'view'=>'faq')),
+				//array('label'=>'Сообщество', 'url'=>array('/sprav/index')),
 				array('label'=>Yii::t("template", "MENU_TOP_ABOUT"), 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>Yii::t("template", "MENU_TOP_MAP"), 'url'=>array('/holes/map')),
 				array('label'=>Yii::t("template", "MENU_TOP_STANDARDS"), 'url'=>array('/site/page', 'view'=>'regulations')),
 				array('label'=>Yii::t("template", "MENU_TOP_STATISTICS"), 'url'=>array('/statics/index')),
 				array('label'=>Yii::t("template", "MENU_TOP_FAQ"), 'url'=>array('/site/page', 'view'=>'faq')),
 				array('label'=>Yii::t("template", "MENU_TOP_MANUALS"), 'url'=>array('/sprav/index')),
->>>>>>> c113d351953878c928106f2e52cd3970cef525fe
 				//array('label'=>'Logout ('.$this->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!$this->user->isGuest)
 			),
 			'htmlOptions'=>array('class'=>'menu'), 
