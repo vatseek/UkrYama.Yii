@@ -105,6 +105,26 @@
 	</div>
 </div>
 	
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#groupSwitch a').click(function(){
+	var $target = $(event.target);
+	if($target.className != "active") {
+		$('#groupSwitch a').removeClass('active');
+		$target.addClass('active');
+		$('#groupsWrap li').hide();
+		$('#groupsWrap #' + event.target.id).show();
+		if(event.target.id=="vk") {
+			$('#groupsWrap #' + event.target.id + ' #vk_groups').css('height','290px');
+			$('#groupsWrap #' + event.target.id + ' iframe').css('height','290px');
+		}
+	}
+	return false;
+	});
+});	
+</script>
+	
+	
 	<!--
 	
 	
