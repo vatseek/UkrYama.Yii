@@ -4,7 +4,7 @@
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="language" content="ru" />
-<meta name="copyright" content="rosyama" />
+<meta name="copyright" content="ukryama" />
 <meta name="robots" content="index, follow" />
 <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
 
@@ -172,7 +172,7 @@
         </script>
                	-->
 	
-	<script type="text/javascript">
+<!--	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-21943923-3']);
 	  _gaq.push(['_trackPageview']);
@@ -183,7 +183,8 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	
-	</script>
+	</script> 
+	-->
 	<? if (!$this->user->isGuest && $flash=$this->user->getFlash('user')):?>
 		<div id="addDiv">
 			<div id="fon">
