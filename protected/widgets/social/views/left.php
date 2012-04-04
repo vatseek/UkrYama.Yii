@@ -1,3 +1,10 @@
+<div id="competition">
+<h2>Внимание! Конкурс.</h2>
+<noindex><a href="http://www.ahelp.ua/competition-rde2012.html" target="_blank" title="Конкурс УкрЯма" alt="Конкурс УкрЯма" /><img src="<?php echo Yii::app()->request->baseUrl?>/images/newroad.jpg" width="195"></a></noindex>
+</div><br />
+
+
+
 <div id="from_blog">
 	<script src="http://www.google.com/jsapi?key=internal-sample" type="text/javascript"></script>
 	<script language="Javascript" type="text/javascript">//<![CDATA[

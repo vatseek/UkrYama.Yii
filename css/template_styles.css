@@ -1144,3 +1144,17 @@ color: rgb(0, 128, 0);
 	opacity: 1;
 	text-align: left;
 }
+
+/*COMPETITION*/
+#competition {
+	word-wrap: break-word;
+	background-color: white;
+	font-size: 12px;
+	padding: 10px;
+	top: 240px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 500 !important;
+	opacity: 1;
+	text-align: left;
+}
