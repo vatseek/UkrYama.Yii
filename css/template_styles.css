@@ -1109,8 +1109,9 @@ color: rgb(0, 128, 0);
 	text-align: center;
 }
 
-.pager ul li{display:inline; margin-right: 1em;}
+.pager ul li{display:inline; margin-right: 0.2em;}
 .pager ul li.hidden {display: none;}
+.pager a{padding:0 0.4em;}
 .pager ul li.previous a,.pager ul li.next a {text-decoration:none; font-size: 1.33em; font-weight: bold;}
 .pager ul li.selected a {color:black; text-decoration:none;}
 
