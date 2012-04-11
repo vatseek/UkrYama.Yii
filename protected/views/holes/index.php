@@ -163,7 +163,7 @@ EOD
       'autoCompleteLength'=>60,
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
-      'defaultVal'=>'Субъект РФ',
+      'defaultVal'=>Yii::t("holes", "WIDGET_DEFAULT_REGION"),
       'cssClass'=>$model->ADR_SUBJECTRF ? '' : 'disabled',
       
       //'scriptFile'=>'jquery.autocomplete.js',      
@@ -180,7 +180,7 @@ EOD
 			<div id="filter_rf_subject_tip" class="filter_roller"></div>
 			<p>
 			<?php
-			$defval='Город';
+			$defval= Yii::t('holes', "WIDGET_DEFAULT_CITY");
 			if ($model->ADR_CITY) $val=$model->ADR_CITY;
 			else $val= $defval;
 			$this->widget('zii.widgets.jui.CJuiAutoComplete', array(
@@ -213,24 +213,24 @@ EOD
 			</p>
 			<div id="filter_city_tip" class="filter_roller"></div>
 			<p>
-			<?php echo $form->dropDownList($model, 'TYPE_ID', CHtml::listData( HoleTypes::model()->findAll(Array('condition'=>'published=1', 'order'=>'ordering')), 'id','name'), array('prompt'=>'Тип дефекта')); ?>
+			<?php echo $form->dropDownList($model, 'TYPE_ID', CHtml::listData( HoleTypes::model()->findAll(Array('condition'=>'published=1', 'order'=>'ordering')), 'id','name'), array('prompt'=>Yii::t("holes", "WIDGET_TYPE_DEFECT"))); ?>
 			</p>
 			<p>
-			<?php echo $form->dropDownList($model, 'STATE', $model->Allstates, array('prompt'=>'Статус дефекта')); ?>
+			<?php echo $form->dropDownList($model, 'STATE', $model->Allstates, array('prompt'=>Yii::t("holes", "WIDGET_STATUS_DEFECT"))); ?>
 			</p>
 			<?php if(Yii::app()->user->isModer) : ?>
 				<p>
 				<?php echo $form->labelEx($model,'NOT_PREMODERATED'); ?>
-				<?php echo $form->checkBox($model,"NOT_PREMODERATED",Array('class'=>'filter_checkbox')); ?>				
+				<?php echo $form->checkBox($model,"NOT_PREMODERATED",Array('class'=>'filter_checkbox')); ?>
 				</p>
 			<?php endif; ?>
 			<span class="filterBtn" onclick="$(this).parents('form').submit();">
-				<i class="text">Показать</i>
+				<i class="text"><?php echo(Yii::t("holes", "WIDGET_SUBMIT_DEFECT"))?></i>
 				<i class="arrow"></i>
 			</span>
 			<br>
 			<?php 
-			if(!$model->isEmptyAttribs): ?><span class="reset" onclick="document.location='/';">Сбросить</span><?php endif; ?>	
+			if(!$model->isEmptyAttribs): ?><span class="reset" onclick="document.location='/';"><?php echo(Yii::t("holes", "WIDGET_CLEAR_DEFECT"))?></span><?php endif; ?>
 		<?php $this->endWidget(); ?>
 </div>
 
