@@ -688,7 +688,7 @@ class Holes extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination'=>array(
-				        'pageSize'=>$this->limit ? $this->limit : 12,				        
+				        'pageSize'=>$this->limit ? $this->limit : 27,				        
 				    ),
 			'sort'=>array(
 			    'defaultOrder'=>'t.DATE_CREATED DESC',
