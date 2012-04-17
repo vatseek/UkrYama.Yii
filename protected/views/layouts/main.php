@@ -85,7 +85,7 @@
             
 			<div class="search">
 				<form action="/map">
-			<input type="image" name="s" src="<?php echo Yii::app()->request->baseUrl; ?>/images/search_btn.gif" class="btn" /><input type="text" class="textInput inactive" name="q"  value="Поиск по адресу" />
+			<input type="image" name="s" src="<?php echo Yii::app()->request->baseUrl; ?>/images/search_btn.gif" class="btn" /><input type="text" class="textInput inactive" name="q"  value="<?php echo Yii::t("template", "FIND_BY_ADRESS");?>" />
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var startSearchWidth=$('.search').width();
@@ -102,7 +102,7 @@
 					searchWidth+=5;
 					}
 				$('.search .textInput').click(function(){
-					if ($(this).val()=='Поиск по адресу')
+					if ($(this).val()=='<?php echo Yii::t("template", "FIND_BY_ADRESS");?>')
 					{
 						$(this).val('').removeClass('inactive');
 					}
@@ -113,7 +113,7 @@
 					
 					if ($(this).val()=='')
 					{
-						$(this).val('Поиск по адресу').addClass('inactive');
+						$(this).val('<?php echo Yii::t("template", "FIND_BY_ADRESS");?>').addClass('inactive');
 					}
 					$('.search').animate({width:startSearchWidth},time);
 					$('.search .textInput').animate({width:startSearchInputWidth},time);
@@ -124,12 +124,12 @@
 			</div>
 			<div class="auth">
 			<?php if(!$this->user->isGuest) : ?>
-					<?php echo CHtml::link('<img src="'.Yii::app()->request->baseUrl.'/images/logout.png" alt="Выйти" />',Array('/site/logout'),Array('title'=>'Выйти')); ?>
+					<?php echo CHtml::link('<img src="'.Yii::app()->request->baseUrl.'/images/logout.png" alt="'.Yii::t("template", "LOGOUT").'" />',Array('/site/logout'),Array('title'=>Yii::t("template", "LOGIN"))); ?>
 					<div class="name">
 						<p><?php echo CHtml::link($this->user->fullname,Array('/holes/personal')); ?></p><span class="grad"></span>
 					</div>
 				<?php else: ?>
-					<?php echo CHtml::link('Войти',Array('/holes/personal'),Array('title'=>'Войти', 'class'=>'profileBtn')); ?>
+					<?php echo CHtml::link(Yii::t("template", "LOGIN"),Array('/holes/personal'),Array('title'=>Yii::t("template", "LOGOUT"), 'class'=>'profileBtn')); ?>
 				<? endif; ?>
 					<style type="text/css">
 						.auth .name
