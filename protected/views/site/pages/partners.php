@@ -20,4 +20,4 @@
 
   <br />
  
-  <p><a href="http://ogo.in.ua/" target="_blank" ><img src="/images/partners/ogo.gif" style="padding:0px 10px 0px 0px;"  /></a><a href="http://ahelp.ua/" target="_blank" ><img src="/images/partners/autoiland.png" style="padding:0px 10px 0px 0px;"  /></a></p>
+  <p><a href="http://ogo.in.ua/" target="_blank" ><img src="/images/pages/partners/ogo.gif" style="padding:0px 10px 0px 0px;"  /></a><a href="http://ahelp.ua/" target="_blank" ><img src="/images/pages/partners/autoiland.png" style="padding:0px 10px 0px 0px;"  /></a></p>
