@@ -157,8 +157,8 @@
 				<a href="http://novus.org.ua/" style="background:none;" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo-novus.png"></a> 
 			</p>
 			<p class="copy">Идея - <noindex><a href="http://navalny.ru/">Алексей Навальный</a></noindex>, 2011<br />
-			<br/>Разработка прототипа и дизайна </noindex><a href="http://greensight.ru">Greensight</a></noindex>. <br/>
-			Хостинг — «<noindex><a href="http://ihc.com.ua/" target="_blank">ihc</a></noindex>»<br /><br />
+			Дизайн </noindex><a href="http://greensight.ru">Greensight</a></noindex>. <br/>
+			Хостинг — «<noindex><a href="http://ihc.com.ua/" target="_blank">ihc</a></noindex>»<br />
 			
 			<br/>Разработано в <a href="http://pixelsmedia.ru">Pixelsmedia</a><br/>
 			Powered by Yii Framework.
