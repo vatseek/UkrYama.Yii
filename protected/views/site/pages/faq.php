@@ -11,15 +11,12 @@ $this->layout='//layouts/header_default_without_add';
 	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
-			<td class="question">Где можно получить больше информации, пообщаться с единомышленниками, и т. д?</td>
+			<td class="question">Где можно получить больше информации, пообщаться с единомышленниками, и т. д?Есть ли требования к оформлению жалобы?</td>
 		</tr>		
 		<tr>
 			<th>A:</th>
 			<td>
-			<p>Почта: <a href="mailto:rossyama.gmail.com">rossyama@gmail.com</a></p>
-                        <p>Форум: <a href="http://forum.rosyama.ru">http://forum.rosyama.ru</a></p>
-                        <p>Твиттер: <a href="https://twitter.com/#!/fezeev">https://twitter.com/#!/fezeev</a></p>
-                        <p>LiveJournal: <a href="http://fezeev.livejournal.com/">http://fezeev.livejournal.com/</a></p>
+			<p>То, как будет написана жалоба (размер шрифта и всё остальное) — не имеет значения. Главное, чтобы присутствовали ваши имя с фамилией, почтовый адрес (чтобы вы могли получить письменный ответ). Жалоба, которую генерирует УкрЯма — полностью готова к отправке (только не забудьте, пожалуйста, вписать свои данные).</p>
                         </td>
 		</tr>		
 	</table>	
@@ -27,7 +24,7 @@ $this->layout='//layouts/header_default_without_add';
 	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
-			<td class="question">Где я могу скачать мобильные приложения для РосЯмы под IPhone или Android?</td>
+			<td class="question">Где я могу скачать мобильные приложения для УкрЯмы под IPhone или Android?</td>
 		</tr>		
 		<tr>
 			<th>A:</th>
@@ -44,15 +41,12 @@ $this->layout='//layouts/header_default_without_add';
 	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
-			<td class="question">Что делать, если на дороге настолько много ям, что впору снимать видео, а не фото?</td>
+			<td class="question">УкрЯма есть в соц. сетях?</td>
 		</tr>		
 		<tr>
 			<th>A:</th>
 			<td>
-			<p>Сфотографируйте одну яму, на ваш выбор. поставьте точку на РосЯме, получите текст заявления. 
-			Полученный текст немного поправьте, напишите не "обнаружена яма по адресу", а "обнаружены множественные 
-			повреждения дорожного покрытия на всём протяжении автодороги [название автодороги] от [пункт А] до [пункт Б]".</p>
-			<p>А дальше всё то же самое.</p>
+			<p>Наши официальные группы:</p> <p><a href="http://vkontakte.ru/ukryama" title="УкрЯма ВКонтакте" target="_blank" >ВКонтакте</a></p>, <p><a href="https://www.facebook.com/ukryama" title="Фейсбук УкрЯмы" target="_blank" >Facebook</a></p>. <p><a href="https://twitter.com/#!/ukryama" title="Твиттер УкрЯмы" target="_blank" >Twitter</a></p>. <p>Пока всё.</p>
 			</td>
 
 		</tr>		
