@@ -27,7 +27,7 @@
   <br />
  	Радиостанции: 		
   <ul class="default"> 			
-    <li>«<a href="http://www.hitfm.ua/happy/podcast/1158-kokodzhamba.html" title="Передача «Хэппи ранок»" target="_blank" >Xіт FM</a>» (<a href="http://ukryama.com/files/smi/files/happy-ranok-hitfm-kokodzhamba-12-10-2011-1158.mp3" title="Передача «Хэппи ранок»" target="_blank" >скачать</a>, 4 Мб)</li>
+    <li>«<a href="http://www.hitfm.ua/happy/podcast/1158-kokodzhamba.html" title="Передача «Хэппи ранок»" target="_blank" >Xіт FM</a>» (<a href="http://ukryama.com/files/smi/happy-ranok-hitfm-kokodzhamba-12-10-2011-1158.mp3" title="Передача «Хэппи ранок»" target="_blank" >скачать</a>, 4 Мб)</li>
    		</ul>
  
   <br />
