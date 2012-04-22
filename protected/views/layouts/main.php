@@ -29,30 +29,37 @@
 								$('.grad').show()
 							}
 
-                        $(".change-language").click( function(){
-                            $lang = $(this).attr("lang");
-                            var theDate = new Date();
-                            var oneWeekLater = new Date(theDate.getTime() + 1000 * 60 * 60 * 24 * 100);
-                            var expiryDate = oneWeekLater.toString();
 
-                                document.cookie = 'prefLang=' + $lang + '; expires=' + expiryDate + '; path=/;';
-
-                            $.ajax({
-                                type: "POST",
-                                url: "<?php echo $this->createUrl("site/changelang")?>",
-                                cache: false,
-                                data: "lang="+$lang,
-                                dataType: "json",
-                                timeout: 5000,
-                                success: function (data) {
-                                }
-                            });
-
-
-                         location.reload(true);
-
-                        })
 					})
+
+
+                    //$(".change-language").click( function(){
+                     function changeLanguage($lang){
+
+                        //$lang = $(this).attr("lang");
+                        var theDate = new Date();
+                        var oneWeekLater = new Date(theDate.getTime() + 1000 * 60 * 60 * 24 * 100);
+                        var expiryDate = oneWeekLater.toString();
+
+                        document.cookie = 'prefLang=' + $lang + '; expires=' + expiryDate + '; path=/;';
+
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo $this->createUrl("site/changelang")?>",
+                            cache: false,
+                            data: "lang="+$lang,
+                            dataType: "json",
+                            timeout: 5000,
+                            success: function (data) {
+                                //console.log(data);
+                            }
+                        });
+
+
+                        location.reload(true);
+                         return false;
+
+                    }
 				</script>
 
 <div class="wrap">
@@ -76,9 +83,9 @@
             <div style="float: left; margin-right: 10px;padding-top: 3px; cursor: pointer;">
 
                 <?php if(Yii::app()->language == "ru"):?>
-                <img src="/images/flags/ua.png" alt="Українською" lang="ua" class="change-language">
+                <a href="#" onclick="changeLanguage('ua');"><img src="/images/flags/ua.png" alt="Українською" lang="ua" class="change-language" ></a>
                  <?php else: ?>
-                 <img src="/images/flags/ru.png" alt="По-русски"  lang="ru" class="change-language">
+                 <a href="#" onclick="changeLanguage('ru');"><img src="/images/flags/ru.png" alt="По-русски"  lang="ru" class="change-language"></a>
                      <?php endif;?>
             </div>
 
