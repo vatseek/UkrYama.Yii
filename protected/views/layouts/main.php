@@ -48,15 +48,15 @@
                             url: "<?php echo $this->createUrl("site/changelang")?>",
                             cache: false,
                             data: "lang="+$lang,
-                            dataType: "json",
+                            dataType: "html",
                             timeout: 5000,
                             success: function (data) {
-                                //console.log(data);
+                                window.location.reload();
                             }
                         });
 
 
-                        location.reload(true);
+
                          return false;
 
                     }
