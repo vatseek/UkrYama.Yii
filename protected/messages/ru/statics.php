@@ -1,7 +1,7 @@
 <?php
 $MESS['HOLES_STATISTICS_NAME']        = 'Статистика ям';
 $MESS['HOLES_STATISTICS_DESCRIPTION'] = 'Статистика ям';
-$MESS['MAX_STRINGS'] = 'Максимальное колличество записей, выводимое по каждому пункту';
+$MESS['MAX_STRINGS'] = 'Максимальное количество записей, выводимое по каждому пункту';
 $MESS['YEAR1'] = 'лет';
 $MESS['YEAR2'] = 'года';
 $MESS['YEAR3'] = 'год';
