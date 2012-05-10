@@ -6,8 +6,8 @@ $MESS['MENU_TOP_STATISTICS']    = 'Статистика';
 $MESS['MENU_TOP_FAQ']           = 'FAQ';
 $MESS['MENU_TOP_MANUALS']       = 'Довідники';
 
-$MESS['LOGIN'] = 'Войти';
-$MESS['LOGOUT'] = 'Выйти';
+$MESS['LOGIN'] = 'Увійти';
+$MESS['LOGOUT'] = 'Вийти';
 $MESS['FIND_BY_ADRESS'] = 'Пошук за адресою';
 
 

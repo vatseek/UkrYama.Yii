@@ -1,9 +1,9 @@
 <?php
 return Array(
-			'GREENSIGHT_ERROR_NOID'=>'Элемент не найден',
-			'GREENSIGHT_ERROR_UNSUPPORTED_IMAGE_TYPE'=>'Неподдерживаемый формат изображения',
-			'GREENSIGHT_ERROR_DATABASE'=>'Ошибка базы данных :(',
-			'GREENSIGHT_ERROR_CANNOT_CREATE_DIR'=>'Ошибка при загрузке файла',
-			'GREENSIGHT_ERROR_RAPIDFIRE'=>'Дефекты нельзя добавлять слишком часто',
+			'GREENSIGHT_ERROR_NOID'=>'Елемент не знайдено',
+			'GREENSIGHT_ERROR_UNSUPPORTED_IMAGE_TYPE'=>'Непідтримуваний формат зображення',
+			'GREENSIGHT_ERROR_DATABASE'=>'Помилка бази даних:(',
+			'GREENSIGHT_ERROR_CANNOT_CREATE_DIR'=>'Помилка при завантаженні файлу',
+			'GREENSIGHT_ERROR_RAPIDFIRE'=>'Дефекти не можна додавати занадто часто',
 			);
 ?>
