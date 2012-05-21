@@ -131,36 +131,36 @@ class Holes extends CActiveRecord
 	public static function getAllstates()	
 	{
 	$arr=Array();
-	$arr['fresh']      = 'Добавлен на сайт';
-	$arr['inprogress'] = 'Заявление отправлено в ГИБДД';
-	$arr['fixed']      = 'Исправлен';
-	$arr['achtung']    = 'Просрочен';
-	$arr['gibddre']    = 'Получен ответ из ГИБДД';
-	$arr['prosecutor'] = 'Жалоба отправлена в прокуратуру';
+	$arr['fresh']      = Yii::t('holes','HOLES_STATE_FRESH_FULL');
+	$arr['inprogress'] = Yii::t('holes','HOLES_STATE_INPROGRESS_FULL');
+	$arr['fixed']      = Yii::t('holes','HOLES_STATE_FIXED_FULL');
+	$arr['achtung']    = Yii::t('holes','HOLES_STATE_ACHTUNG_FULL');
+	$arr['gibddre']    = Yii::t('holes','HOLES_STATE_GIBDDRE_FULL');
+	$arr['prosecutor'] = Yii::t('holes','HOLES_STATE_PROSECUTOR_FULL');
 	return $arr;
 	}
 	
 	public static function getAllstatesShort()	
 	{
 	$arr=Array();
-	$arr['fresh']      = 'Добавлено на сайт';
-	$arr['inprogress'] = 'В ГАИ';
-	$arr['fixed']      = 'Отремонтировано';
-	$arr['achtung']    = 'В ГАИ';
-	$arr['gibddre']    = 'Получен ответ';
-	$arr['prosecutor'] = 'Заявление в прокуратуре';
+	$arr['fresh']      = Yii::t('holes','HOLES_STATE_FRESH_SHORT');
+	$arr['inprogress'] = Yii::t('holes','HOLES_STATE_INPROGRESS_SHORT');
+	$arr['fixed']      = Yii::t('holes','HOLES_STATE_FIXED_SHORT');
+	$arr['achtung']    = Yii::t('holes','HOLES_STATE_ACHTUNG_SHORT');
+	$arr['gibddre']    = Yii::t('holes','HOLES_STATE_GIBDDRE_SHORT');
+	$arr['prosecutor'] = Yii::t('holes','HOLES_STATE_PROSECUTOR_SHORT');
 	return $arr;
 	}	
 	
 	public static function getAllstatesMany()	
 	{
 	$arr=Array();
-	$arr['fresh']      = 'Новые';
-	$arr['inprogress'] = 'Отправлено заявление';
-	$arr['fixed']      = 'Сделаны';
-	$arr['achtung']    = 'Не сделаны';
-	$arr['gibddre']    = 'Получен ответ';
-	$arr['prosecutor'] = 'Жалоба в прокуратуре';
+	$arr['fresh']      = Yii::t('holes','HOLES_STATE_FRESH_MANY');
+	$arr['inprogress'] = Yii::t('holes','HOLES_STATE_INPROGRESS_MANY');
+	$arr['fixed']      = Yii::t('holes','HOLES_STATE_FIXED_MANY');
+	$arr['achtung']    = Yii::t('holes','HOLES_STATE_ACHTUNG_MANY');
+	$arr['gibddre']    = Yii::t('holes','HOLES_STATE_GIBDDRE_MANY');
+	$arr['prosecutor'] = Yii::t('holes','HOLES_STATE_PROSECUTOR_MANY');
 	return $arr;
 	}	
 	
