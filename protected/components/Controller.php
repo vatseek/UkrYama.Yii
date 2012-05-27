@@ -75,7 +75,7 @@ class Controller extends CController
                     $sChosenLanguage = "ru";
 
                 } else {
-                    $sChosenLanguage = "ua";
+                    $sChosenLanguage = "uk_ua";
 
                 };
 
@@ -93,7 +93,7 @@ class Controller extends CController
                 Yii::app()->language = "ru";
                 break;
             default:
-                Yii::app()->language = "ua";
+                Yii::app()->language = "uk_ua";
         }
 
 
