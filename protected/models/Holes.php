@@ -318,7 +318,7 @@ class Holes extends CActiveRecord
 
 	public static function imagecreatefromfile($file_name, &$_image_info = array())
 	{
-		$_image_info = getimagesize($file_name, &$_image_additional_info);
+		$_image_info = getimagesize($file_name, $_image_additional_info);
 		$_image_info['additional'] = $_image_additional_info;
 		switch($_image_info['mime'])
 		{
