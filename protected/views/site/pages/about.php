@@ -4,7 +4,7 @@ $this->pageTitle = Yii::app()->name . ' :: О проекте';
 <h1><?php echo Yii::t("template", "MENU_TOP_ABOUT");?></h1>
 <p class="intro"> <?php echo Yii::t("static", "STATIC_ABOUT_P_1");?> «<a
     href="/regulations/"><?php echo Yii::t("static", "STATIC_ABOUT_P_1_2");?> </a>».</p>
-<div style="margin-left:250px"><p><?php echo Yii::t("static", "STATIC_ABOUT_P_2");?> <a
+<div style="margin-left:40px"><p><?php echo Yii::t("static", "STATIC_ABOUT_P_2");?> <a
     href="http://zakon.rada.gov.ua/cgi-bin/laws/main.cgi?nreg=254%EA%2F96-%E2%F0"
     target="_blank"><?php echo Yii::t("static", "STATIC_ABOUT_P_2_1");?></a>
     <?php echo Yii::t("static", "STATIC_ABOUT_P_2_2");?>
