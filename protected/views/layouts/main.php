@@ -9,7 +9,7 @@
 <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/template_styles.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/template_styles.css?v=<?php echo rand(); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 <!--[if lte IE 7]><link rel="stylesheet" href="/css/ie.css" type="text/css" /><![endif]-->
 
@@ -86,15 +86,15 @@
 			'activeCssClass'=>'selected',
 		)); ?>
 
-            <div style="float: left; margin-right: 10px;padding-top: 3px; cursor: pointer;">
+            <div class="change-language">
 
                 <?php if(Yii::app()->language == "ru"):?>
-                <a href="#" onclick="changeLanguage('ua');"><img src="/images/flags/ua.png" alt="Українською" lang="ua" class="change-language" ></a>
+                <a href="#" onclick="changeLanguage('ua');" class="ukr">Українською</a>
                  <?php else: ?>
-                 <a href="#" onclick="changeLanguage('ru');"><img src="/images/flags/ru.png" alt="По-русски"  lang="ru" class="change-language"></a>
+                 <a href="#" onclick="changeLanguage('ru');" class="ru">По-русски</a>
                      <?php endif;?>
             </div>
-
+            <a href="<?php echo $this->createUrl('site/page',array('view'=>'donate'))?>" class="help-link">Помочь проекту</a>
             
 			<div class="search">
 				<form action="/map">
@@ -161,22 +161,51 @@
 		<div class="container">
 			<p class="rosyama">
 				<noindex><a target="_blank" href="http://rosyama.ru/" title="РосЯма">РосЯма</a></noindex><br>Яму мне запили!<br/>			
-				<a href="http://novus.org.ua/" style="background:none;" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo-novus.png"></a> 
+				 
 			</p>
 			<p class="copy">Идея - <noindex><a href="http://navalny.ru/">Алексей Навальный</a></noindex>, 2011<br />
-			Дизайн </noindex><a href="http://greensight.ru">Greensight</a></noindex>. <br/>
 			Хостинг — «<noindex><a href="http://ihc.com.ua/" target="_blank">ihc</a></noindex>»<br />
-			
-			<br/>Разработано в <a href="http://pixelsmedia.ru">Pixelsmedia</a><br/>
-			Powered by Yii Framework.
-			<br />
-			
+			<span class="studio-copyright">Дизайн — веб-студия </noindex><a href="http://stfalcon.com"><span class="icon"></span>stfalcon.com</a></noindex></span>
+			Разработано в <a href="http://pixelsmedia.ru">Pixelsmedia</a> на Yii.<br/>
+			<a href="http://novus.org.ua/" style="background:none;" class="notus-logo" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo-novus.png"></a>
 			</p>
 			<?php if($this->beginCache('countHoles', array('duration'=>3600))) { ?>
-			<?php $this->widget('application.widgets.collection.collectionWidget'); ?>			
+			<!--<?php $this->widget('application.widgets.collection.collectionWidget'); ?>-->
+			<div class="collection">
+				<span class="label">Наша колекція нараховує:</span>
+				<div class="collection-counter-wrap">
+					<div class="collection-item">
+						<div class="wrap">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+						</div>
+						дефекти
+					</div>
+					<div class="collection-item">
+						<div class="wrap">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+						</div>
+						в ДАЇ
+					</div>
+					<div class="collection-item">
+						<div class="wrap">
+							<span>1</span>
+							<span>2</span>
+							<span>3</span>
+						</div>
+						виправлено
+					</div>
+					<div class="collection-item how">
+						<a href="#">Як покращити<br> ці показники?</a>
+					</div>
+				</div>
+			</div>			
 			<?php $this->endCache(); } ?>
 			<p class="friends">Информация:<br />
-				<a href="<?php echo $this->createUrl('site/page',array('view'=>'donate'))?>">Помочь проекту</a><br />
 				<a href="http://ukryama.info" target="_blank">Сообщество</a><br />
 				<a href="<?php echo $this->createUrl('site/page',array('view'=>'partners'))?>" title="Наши партнеры">Партнеры</a><br />
 				<a href="<?php echo $this->createUrl('site/page',array('view'=>'thanks'))?>" title="Все те, кто нам помог">Благодарности</a><br />
