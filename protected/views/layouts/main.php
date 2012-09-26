@@ -98,41 +98,8 @@
             
 			<div class="search">
 				<form action="/map">
-			<input type="image" name="s" src="<?php echo Yii::app()->request->baseUrl; ?>/images/search_btn.gif" class="btn" /><input type="text" class="textInput inactive" name="q"  value="<?php echo Yii::t("template", "FIND_BY_ADRESS");?>" />
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var startSearchWidth=$('.search').width();
-			var startSearchInputWidth=$('.search .textInput').width();
-			var time=200;
-			
-							var searchWidth=230;
-				var	searchInputWidth=searchWidth-30;
-				
-										searchInputWidth-=47;
-				searchWidth-=47;
-							if ($.browser.msie && $.browser.version == 9) {
-					searchInputWidth+=5;
-					searchWidth+=5;
-					}
-				$('.search .textInput').click(function(){
-					if ($(this).val()=='<?php echo Yii::t("template", "FIND_BY_ADRESS");?>')
-					{
-						$(this).val('').removeClass('inactive');
-					}
-					$('.search').animate({width:searchWidth},time);
-					$('.search .textInput').animate({width:searchInputWidth},time);
-				})
-				$('.search .textInput').blur(function(){
-					
-					if ($(this).val()=='')
-					{
-						$(this).val('<?php echo Yii::t("template", "FIND_BY_ADRESS");?>').addClass('inactive');
-					}
-					$('.search').animate({width:startSearchWidth},time);
-					$('.search .textInput').animate({width:startSearchInputWidth},time);
-				})
-			})
-	</script>
+			<input type="image" name="s" src="<?php echo Yii::app()->request->baseUrl; ?>/images/search_btn.gif" class="btn" /><input type="text" class="textInput inactive" name="q"  value="" />
+			<span class="placeholder"><?php echo Yii::t("template", "FIND_BY_ADRESS");?></span>
 	</form>
 			</div>
 			<div class="auth">
@@ -160,7 +127,7 @@
 	<div class="footer">
 		<div class="container">
 			<p class="rosyama">
-				<noindex><a target="_blank" href="http://rosyama.ru/" title="РосЯма">РосЯма</a></noindex><br>Яму мне запили!<br/>			
+				<noindex><a class="rs" target="_blank" href="http://rosyama.ru/" title="РосЯма">РосЯма</a></noindex><br>Яму мне запили!<br/>			
 				 
 			</p>
 			<p class="copy">Идея - <noindex><a href="http://navalny.ru/">Алексей Навальный</a></noindex>, 2011<br />
@@ -176,26 +143,32 @@
 				<div class="collection-counter-wrap">
 					<div class="collection-item">
 						<div class="wrap">
-							<span>1</span>
-							<span>2</span>
-							<span>3</span>
-							<span>4</span>
+							<span class="inside">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+							</span>
 						</div>
 						дефекти
 					</div>
 					<div class="collection-item">
 						<div class="wrap">
-							<span>1</span>
-							<span>2</span>
-							<span>3</span>
+							<span class="inside">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+							</span>
 						</div>
 						в ДАЇ
 					</div>
 					<div class="collection-item">
 						<div class="wrap">
-							<span>1</span>
-							<span>2</span>
-							<span>3</span>
+							<span class="inside">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+							</span>
 						</div>
 						виправлено
 					</div>
