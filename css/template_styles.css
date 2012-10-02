@@ -520,7 +520,7 @@ ul.usermenu li.active .profileBtn{background: #f88100;}
 	font-size: 1.4em;
 	line-height: 1.42em;
 	margin: 0 auto;
-	padding: 0 0 220px;
+	padding:0 0 25px;
 	text-align: left;
 	width: 960px;
 }
@@ -1317,8 +1317,7 @@ color: rgb(0, 128, 0);
 /*SOCIAL ICONS*/
 
 .socialGroups {
-		background: #fff;
-		margin-bottom: 30px;
+
 	}
 	
 		.socialGroups .socbuttons {
@@ -1345,31 +1344,74 @@ color: rgb(0, 128, 0);
 			}
 
 			#groupSwitch {
-			background: #fff;
 			clear: both;
-			font-size: 1.0em;
 			list-style-type: none;
-			margin: 0;
-			padding: 15px 10px 10px;
+			margin: 3px 0 0;
+			padding: 0;
+			font-size: 0;
 		}
 		
 			#groupSwitch li {
-				display: inline;
+				display: inline-block;
 				margin: 0;
 			}
+			*+ html #groupSwitch li{display:inline;zoom:1;}
 
 			#groupSwitch a {
-				background: #fff;
-				border: 3px solid #fff;
-				padding: 0 2px;
+				background: none;
+				display: block;
+				height:30px;
+				line-height: 30px;
+				border-radius:5px 5px 0 0;
+				-moz-border-radius:5px 5px 0 0;
+				-webkit-border-radius:5px 5px 0 0;
+				padding: 0 16px;
+				font-size: 14px;
+				text-decoration: none;
+				color:#fff;
+				position: relative;
+				z-index: 1;
 			}
 			
 			#groupSwitch a.active, #groupSwitch a.active:hover {
-				background: #eee;
-				border: 3px solid #eee;
-				color: #4c4c4c;
-				cursor: default;
-				text-decoration: none;
+				background: #fff;
+				color:#3c5a98;
+			}
+			#groupSwitch a.active .l,
+			#groupSwitch a.active .r{
+				position: absolute;
+				bottom:0px;
+				width:12px;
+				height:12px;
+				background: #3c5a98;
+				display: block;
+				border-radius:6px;
+				-moz-border-radius:6px;
+				-webkit-border-radius:6px;
+				z-index:3;
+			}
+			#groupSwitch a.active .r{
+				right:-12px;
+			}
+			#groupSwitch a.active .l{
+				left: -12px;
+			}
+			#groupSwitch a.active:before,
+			#groupSwitch a.active:after{
+				width:6px;
+				height:6px;
+				content: '';
+				display: block;
+				position: absolute;
+				background: #fff;
+				bottom:0;
+				z-index: 2;
+			}
+			#groupSwitch a.active:before{
+				left:-6px;
+			}
+			#groupSwitch a.active:after{
+				right:-6px;
 			}
 	
 		#groupsWrap {
@@ -1377,6 +1419,7 @@ color: rgb(0, 128, 0);
 			list-style-type: none;
 			margin: 0;
 			overflow: hidden;
+			height:301px;
 		}
 			
 			#groupsWrap li {
@@ -1384,43 +1427,59 @@ color: rgb(0, 128, 0);
 				margin: 0;
 				overflow: hidden;
 				position: relative;
-				width: 241px;
 			}
 			
 			#groupsWrap li#fb {
-				height: 257px;
 				top: -1px;
 			}
 			
 			#groupsWrap li#vk {
 				border-bottom: 2px solid #eef2f5;
 				display: none;
-				height: 288px;
+				height: 290px;
 				margin-bottom: -22px;
 				top: -22px;
 			}
 
 .socbuttons {
 	float: left;
-	margin: 0;
+	margin: 8px 0 30px 10px;
 	list-style-type: none;
 }
 
 	.socbuttons li {
 		float: left;
-		height: 21px;
-		margin: 0 4px 0 0;
+		height: 24px;
+		margin: 0 10px 0 0;
 		overflow: hidden;
-		width: 21px;
+		width: 24px;
+	}
+	.socbuttons li a{
+		display: block;
+		width:24px;
+		height:24px;
+		background: url(../images/soc-sprite.png) -1000px -1000px no-repeat;
 	}
 	
-		.socbuttons img { display:block; position:relative;}
+		.socbuttons img { display:block; position:relative; display: none;}
 		.socbuttons .rss img {left:0;}
 		.socbuttons .facebook img {left:-21px;}
 		.socbuttons .vkontakte img {left:-42px;}
 		.socbuttons .lj img {left:-63px;}
 		.socbuttons .twitter img {left:-84px;}
 
+		.socbuttons li.rss a{
+			background-position: 0 0;
+		}
+		.socbuttons li.twitter a{
+			background-position: -34px 0;
+		}
+		.socbuttons li.vkontakte a{
+			background-position: -69px 0;
+		}
+		.socbuttons li.facebook a{
+			background-position: -103px 0;
+		}
 		
 .social {
 	float: right;
@@ -1725,3 +1784,58 @@ div.form #user-groups-passrequest-form label{
 	margin:0 7px 0 0;
 }
 
+
+.bottom-content{
+	width:960px;
+	margin:0 auto;
+	padding: 0 0 220px;
+}
+
+.bottom-content .social-widgets-wrap{
+	float:left;
+	width:464px;
+	background:#3c5a98;
+	padding:3px;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+}
+
+.bottom-content .twitter-widget-wrap{
+	float:left;
+	margin:0 20px 0 0;
+	width:225px;
+}
+.bottom-content .l-col{
+	width:715px;
+	float:left;
+	padding:25px 0 0;
+	border-top: 1px solid #d0d5d9;
+}
+.bottom-content .r-col{
+	width:225px;
+	float:right;
+	padding:25px 0 0;
+	border-top: 1px solid #d0d5d9;
+}
+
+#groupsWrap{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.bottom-content .fbConnectWidgetTopmost{
+	border:none !important;
+}
+
+
+.small-menu{
+	clear:both;
+	text-align: left;
+	padding:0 0 0 10px;
+}
+.small-menu li{
+	margin:0 0 14px;
+	font-size: 14px;
+	color:#000;
+}
