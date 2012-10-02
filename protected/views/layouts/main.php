@@ -123,7 +123,114 @@
 		</div>
 	</div>	
 		<?php echo $content; ?>
-
+	<div class="bottom-content clearfix">
+		<div class="r-col">
+			<ul class="socbuttons">
+				<li class="rss"><noindex><a href="http://ukryama.info/rss/new/" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl?>/images/social_icons.png" alt="RSS" class="quimby_search_image"></a></noindex></li>
+				<li class="twitter"><noindex><a href="http://twitter.com/ukryama" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl?>/images/social_icons.png" alt="Twitter" class="quimby_search_image"></a></noindex></li>
+				<li class="vkontakte"><noindex><a href="http://vkontakte.ru/ukryama" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl?>/images/social_icons.png" alt="VKontakte" class="quimby_search_image"></a></noindex></li>
+				<li class="facebook"><noindex><a href="http://www.facebook.com/ukryama" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl?>/images/social_icons.png" alt="Facebook" class="quimby_search_image"></a></noindex></li>
+			</ul>
+			<ul class="small-menu">
+				<li>Информація:</li>
+				<li><a href="#">Допомогти проекту</a></li>
+				<li><a href="#">Спільнота</a></li>
+				<li><a href="#">Партнери</a></li>
+				<li><a href="#">Подяка</a></li>
+				<li><a href="#">ЗМІ</a></li>
+			</ul>
+		</div>
+		<div class="l-col">
+			<div class="twitter-widget-wrap">
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<style type="text/css" media="screen">
+					.twtr-ft{
+						background:#0ac0f5;
+					}
+					.twtr-hd {padding:0}
+					#twtr-widget-1 div.twtr-doc {background:#fff !important}
+					.twtr-timeline, .twtr-doc {}
+					.twtr-widget {background: #fff; margin-bottom: 30px; padding: 10px 15px 0}
+					.twtr-ft img {display:none}
+					.twtr-ft span {float:none}
+					.twtr-ft .twtr-join-conv {display:inline; color:#1985b5 !important; font-size: 11px;}
+				</style>
+				<noindex><script>
+					new TWTR.Widget({
+					version: 2,
+					type: 'search',
+					search: 'ukryama',
+					interval: 6000,
+					title: '',
+					subject: '',
+					width: 219,
+					height: 313,
+					theme: {
+						shell: {
+							background: '#ececec',
+							color: '#ffffff'
+						},
+						tweets: {
+							background: '#ffffff',
+							color: '#444444',
+							links: '#1985b5'
+						}
+					},
+					features: {
+						scrollbar: false,
+						loop: true,
+						live: true,
+						hashtags: true,
+						timestamp: true,
+						avatars: true,
+						toptweets: true,
+						behavior: 'default'
+					}
+					}).render().start();
+				</script></noindex>
+			</div>
+			<div class="social-widgets-wrap">
+				<div class="socialGroups">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<ul id="groupSwitch">
+				<li><noindex><a href="/" id="fb" class="active">Faceboo<span class="l"></span><span class="r"></span>k</a></noindex></li>
+				<li><noindex><a href="/" id="vk">Вконтакте<span class="l"></span><span class="r"></span></a></noindex></li>
+			</ul>
+			<ul id="groupsWrap">
+					<li id="fb">
+						<noindex><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fukryama&amp;width=468&amp;height=281&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=264274036927475" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:468px; height:281px;" allowTransparency="true"></iframe></noindex> 
+					</li>
+					<li id="vk">
+						<!-- VK Widget -->
+						<div id="vk_groups" style="width: 468px; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; height: 290px; background-position: initial initial; background-repeat: initial initial; "><noindex><iframe name="fXDdef69" frameborder="0" src="http://vkontakte.ru/widget_community.php?app=2472807&amp;width=468px&amp;gid=25318995&amp;mode=0&amp;height=290&amp;url=http%3A%2F%2Fukryama.com%2F" width="468px" height="200" scrolling="no" id="vkwidget1" style="overflow-x: hidden; overflow-y: hidden; height: 432px; "></iframe></noindex></div>
+						<script>
+							var widget_vk_height = 290;
+							var widget_vk_width = 468;
+							VK.Widgets.NewGroup = function(objId, options, gid) {
+								VK.Widgets.Group(objId, options, gid);
+								return this.count;
+							};
+							//all creating widget
+							var widget_id = VK.Widgets.NewGroup("vk_groups", {
+								mode	:	0,
+								width	:	widget_vk_width,
+								height	:	widget_vk_height
+							}, 30251259);
+							
+							$(function() {
+								var vk_groups_iframe = $("#vk_groups").find("iframe");
+								$("#groupsWrap #vk").click(function(){
+									VK.Widgets.RPC[widget_id].methods.resize(widget_vk_height);
+								});
+								vk_groups_iframe.attr("src", vk_groups_iframe.attr("src"));
+							});	
+						</script>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
 	<div class="footer">
 		<div class="container">
 			<p class="rosyama">
