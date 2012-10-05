@@ -1159,10 +1159,26 @@ div.filter_roller span.item span { font-weight: bold; }
 }
 
 	.filter p {
-		width: 275px;
+		width: 265px;
 		float: left;
-		margin: 0 20px 9px 0px;
+		margin: 0 10px 9px 0px;
 		height:25px;
+	}
+	.filter p.long{
+		width:300px;
+		margin: 0 20px 9px 0px;
+	}
+	.filter p label{
+		float:left;
+		width:70px;
+		padding:0 10px 0 0;
+		text-align: right;
+		font-size: 12px;
+		height:23px;
+		line-height: 23px;
+	}
+	.filter p label.fc{
+		width:50px;
 	}
 
 	.filter select {
@@ -1185,7 +1201,7 @@ div.filter_roller span.item span { font-weight: bold; }
 		height:23px;
 		line-height: 23px;
 		text-indent: 8px;
-		width:243px;
+		width:237px;
 	}
 	
 	.filter .filter_checkbox{
