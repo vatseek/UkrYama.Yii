@@ -67,13 +67,7 @@
 			}
 			
 			.holes_list .service i {
-				background: url(../images/fog.png) repeat-y;
-				display: block;
-				height: 100%;
-				position: absolute;
-				right: -1px;
-				top: 0;
-				width: 18px;
+				
 			}
 
 			.holes_list .social {
@@ -85,9 +79,7 @@
 
 				.holes_list .social span { margin-right: 4px; float:left; line-height: 20px;}
 				.holes_list .status_span { font-weight: bold; font-size: 20px; }
-				.holes_list .state_fresh { color: inherit; }
-				.holes_list .state_inprogress { color: orange; }
-				.holes_list .state_gibddre { color: orange; } 
+				
 				.holes_list .state_achtung { color: maroon; } 
 				.holes_list .state_prosecutor { color: maroon; }
 				.holes_list .state_fixed { color: green; }
@@ -99,8 +91,17 @@
 	.holes_list a, .holes_list a:hover {
 		text-decoration: none;
 	}
-
-
+.holes_list .status_span{
+	margin:6px 0 0;
+	width:7px;
+	height:7px;
+	vertical-align: middle;
+	background: url(../images/dots.png) 0 0 no-repeat;
+	text-indent: -9999px;
+}
+.holes_list .state_fresh {  }
+.holes_list .state_inprogress { background-position: 0 100%; }
+.holes_list .state_gibddre { background-position: 0 100%; } 
 
 .pagination a, .pagination span {
 	margin-right: 1em;

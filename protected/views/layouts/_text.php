@@ -1,5 +1,6 @@
 <!-- Переделаный About [Начало] -->
 <div class="rCol">
+	<div class="aboutProject-placeholder" style="display:none;"><a href="#" id="show-about">Як працює УкрЯма?</a></div>
 	<div class="aboutProject-wrap">
 		<h2>Як працює УкрЯма</h2>
 		<ul class="aboutProject">
@@ -13,6 +14,12 @@
 <script>
 	$('#close-about').click(function(e){
 		$(this).closest('.aboutProject-wrap').slideUp(180, function(){$(this).addClass('hidden')});
+		$('.aboutProject-placeholder').slideDown(180);
+		e.preventDefault();
+	});
+	$('#show-about').click(function(e){
+		$('.aboutProject-wrap').slideDown(180, function(){$(this).addClass('hidden')});
+		$('.aboutProject-placeholder').slideUp(180);
 		e.preventDefault();
 	});
 </script>

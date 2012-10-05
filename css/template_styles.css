@@ -661,7 +661,7 @@ div.submit input {font: normal 1em Arial, sans-serif; margin-right: 8px;}
 	width:960px;
 	margin:0 0 0 -20px;
 	background: url(../images/about-project.png) 0 0 no-repeat;
-	height:395px;
+	height:350px;
 	overflow: hidden;
 	position: relative;
 }
@@ -674,7 +674,6 @@ div.submit input {font: normal 1em Arial, sans-serif; margin-right: 8px;}
 	top:20px;
 	right:20px;
 	font-size: 15px;
-	color:#046ab2;
 	text-decoration: none;
 	border-bottom: 1px dashed;
 	margin:0 0 0 15px;
@@ -909,8 +908,14 @@ p a img{vertical-align: middle;}
 }
 
 div#afterloginzamessage { position: absolute; border: 1px solid grey; background-color: #eee; color: black; padding: 10px; width: 250px; }
-ul.default li { margin-left: 20px; list-style: circle; }
+ul.default li { padding-left: 30px; list-style: none; position: relative;}
 
+ul.default li:before{
+	content:'—';
+	position: absolute;
+	left:0px;
+	top:0px;
+}
 
 
 /* */
@@ -939,7 +944,7 @@ div.news-list-mainpage
 
 div.news-list-mainpage a, div.news-list a
 {
-	color:#1985b5;
+	
 }
 a.show
 {
@@ -1139,7 +1144,7 @@ p.date {
 }*/
 
 
-div.filter_roller { width: 185px; border: 1px solid silver; padding: 5px; height: 200px; overflow-y: scroll; position: absolute; z-index: 3; background-color: white; margin-top: -25px; display: none; }
+div.filter_roller { /*width: 185px;*/ border: 1px solid silver; padding: 5px; height: 200px; overflow-y: scroll; position: absolute; z-index: 3; background-color: white; margin-top: -25px; display: none; }
 div.filter_roller span.item { display: block; margin-bottom: 2px; cursor: pointer; }
 div.filter_roller span.item:hover { background-color: #e0e0e0; }
 div.filter_roller span.item span { font-weight: bold; }
@@ -1157,6 +1162,7 @@ div.filter_roller span.item span { font-weight: bold; }
 		width: 275px;
 		float: left;
 		margin: 0 20px 9px 0px;
+		height:25px;
 	}
 
 	.filter select {
@@ -1196,11 +1202,13 @@ div.filter_roller span.item span { font-weight: bold; }
 	}
 
 .lCol .like {
-	border-top: 1px solid #d1d1d1;
+	
+}
+.lCol .like .b-share{
+	padding:0;
 }
 
 .lCol .like #fb_like {
-	border-top: 1px solid #fff;
 	padding-top: 30px;
 }
 
@@ -1528,7 +1536,6 @@ color: rgb(0, 128, 0);
 	height:34px;
 	line-height: 34px;
 	vertical-align: middle;
-	color:#046ab2;
 }
 .pager ul li.previous a,.pager ul li.next a {font-size: 22px; text-decoration: none;}
 .pager ul li.selected a {
@@ -1568,6 +1575,7 @@ color: rgb(0, 128, 0);
 	z-index: 500 !important;
 	opacity: 1;
 	text-align: left;
+	border:1px solid #d0d5d9;
 }
 
 /*COMPETITION*/
@@ -1684,7 +1692,8 @@ div.form #user-groups-passrequest-form label{
 	margin:0 0 0 -20px;
 }
 .collection .collection-item.how{
-	padding:5px 0 0;
+	padding:3px 0 0;
+	font-size: 14px;
 }
 .collection .collection-item{
 	float:left;
@@ -1838,4 +1847,15 @@ div.form #user-groups-passrequest-form label{
 	margin:0 0 14px;
 	font-size: 14px;
 	color:#000;
+}
+
+
+.aboutProject-placeholder{
+	text-align: center;
+	font-size: 18px;
+}
+.aboutProject-placeholder a{
+	color:#000;
+	text-decoration: none;
+	border-bottom: 1px dashed;
 }
