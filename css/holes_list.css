@@ -83,7 +83,7 @@
 				.holes_list .state_achtung { color: maroon; } 
 				.holes_list .state_prosecutor { color: maroon; }
 				.holes_list .state_fixed { color: green; }
-				.holes_list .social img { float: right; margin:-4px -2px 0 0; }
+				.holes_list .social img { float: right; margin:-4px -2px 0 0; top:-7px;}
 
 				.holes_list .status_days { border-left: 1px solid #dadadb; }
 				.holes_list .status_days i { border-left: 1px solid #fff; font-style: normal; padding-left: 4px; }
