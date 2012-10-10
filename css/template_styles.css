@@ -1176,6 +1176,7 @@ div.filter_roller span.item span { font-weight: bold; }
 		font-size: 12px;
 		height:23px;
 		line-height: 23px;
+		white-space: nowrap;
 	}
 	.filter p label.fc{
 		width:50px;
@@ -1258,7 +1259,7 @@ td.bx-auth-label{text-align:right; font-weight:normal;}
 td.bx-auth-label .required .required{
 	display: none;
 }
-table.bx-auth-table{margin-top:8px; }
+table.bx-auth-table{margin-top:5px; }
 table.bx-auth-table input[type="text"],
 table.bx-auth-table input[type="password"]{
 	width:250px;
@@ -1289,7 +1290,7 @@ input[type="submit"]{
 	padding:0 9px;
 	color:#fff;
 }
-table.bx-auth-table td {padding:3px; padding-bottom: 10px;}
+table.bx-auth-table td {padding:3px; padding-bottom: 7px;}
 
 div.bx-auth input.bx-auth-input {vertical-align:middle;}
 div.bx-auth span.bx-auth-secure {background-color:#FFFAE3; border:1px solid #DEDBC8; padding:2px; display:inline-block; vertical-align:middle;}
@@ -1311,8 +1312,21 @@ padding-top: 10px;
 }
 .faq-item th,td
 {
-	padding:0 24px 10px 0;
+	padding:0 24px 1px 0;
 	line-height: 1.45em;
+}
+.bx-registration-table{
+	margin:0 0 25px;
+}
+.bx-registration-table td #refreshCaptcha{
+	clear: both;
+}
+.bx-registration-table td img{
+	border:1px solid #000;
+	display: block;
+}
+.bx-registration-table td b{
+	display: none;
 }
 
 .faq-item .question, .faq-item th
@@ -1659,10 +1673,7 @@ div.bx-auth-line{
 }
 
 div.form #user-groups-passrequest-form label{
-	text-align: left;
-	float:left;
-	line-height: 23px;
-	width:144px;
+	
 }
 
 .twtr-widget{
@@ -1894,3 +1905,29 @@ div.form #user-groups-passrequest-form label{
 }
 
 
+
+.authorize-submit-cell a{
+	font-size: 12px;
+	margin-left:10px;
+	vertical-align: middle;
+	position: relative;
+	top:-2px;
+}
+#login-form{
+	font-size: 12px;
+}
+#login-form .bx-auth-table{
+	font-size: 14px;
+}
+#login-form .bottom-text{
+	padding:25px 0 0 65px;
+}
+#login-form .bottom-text br{
+	display: none;
+}
+#login-form .bottom-text big{
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	margin:0 0 5px;
+}
