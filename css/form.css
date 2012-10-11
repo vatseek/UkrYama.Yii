@@ -48,13 +48,13 @@ div.form{
 
 div.form tr td:first-child{
 	width: 210px;
-	padding:0 10px 0 0;
+	padding:0 20px 0 0;
 	text-align: right;
 }
 
 div.form thead tr td:first-child{
 	text-align: left;
-	font-size: 1.84em;
+	font-size: 22px;
 	font-weight: normal;
 	padding:0 0 10px;
 }
@@ -82,6 +82,7 @@ div.form input[type="submit"]{
 	cursor: pointer;
 	padding:0 9px;
 	color:#fff;
+	margin:0;
 }
 div.form input[type="text"],
 div.form input[type="password"]{
@@ -216,4 +217,14 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 div.chekboxes input { 
 float: left;
 width: 20px;
+}
+
+
+
+
+#user-groups-passrequest-form p a{
+	font-size: 11px;
+}
+#user-groups-passrequest-form p{
+	margin-left:230px;
 }

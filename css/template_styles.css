@@ -60,7 +60,7 @@ textarea{
 }
 	.change-language{
 		position: absolute;
-		top:40px;
+		top:41px;
 		left:735px;
 		font-size: 1.4em;
 		z-index: 5;
@@ -102,8 +102,8 @@ textarea{
 		}
 		.search{
 			position: absolute;
-			top:35px;
-			left:234px;
+			top:34px;
+			left:233px;
 			z-index:2;
 			border:1px solid #9aa3ab;
 			border-radius:3px;
@@ -122,7 +122,7 @@ textarea{
 			font-size: 1.2em;
 			display: block;
 			width:85px;
-			line-height: 1.2em;
+			line-height: 1.3em;
 		}
 		.search .btn{
 			float:right;
@@ -227,9 +227,9 @@ textarea{
 			
 			.auth .profileBtn{
 				font-size: 1.16em;
-				top: 108px;
+				top: 110px;
 				position: relative;
-				margin:0 0 0 20px;
+				margin:0 0 0 18px;
 			}
 			.auth .profileBtn:before{
 				content: '';
@@ -396,12 +396,12 @@ ul.usermenu li.active .profileBtn{background: #f88100;}
 		border-radius: 2px;
 		color: #fff;
 		font-size: 1.1em;
-		padding:0 10px;
+		padding:0 9px;
 		height: 25px;
 		line-height:25px;
 		text-decoration: none;
 		display: inline-block;
-		margin-top:36px;
+		margin-top:34px;
 	}
 	*+ html .filterBtn{display: inline;zoom:1;}
 
@@ -457,7 +457,7 @@ ul.usermenu li.active .profileBtn{background: #f88100;}
 	border-radius:6px;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
-	margin:0 0 0 -10px;
+	margin:0 -22px 0 -10px;
 	position: relative;
 }
 #feedControl .gfc-results:before{
@@ -1165,7 +1165,7 @@ div.filter_roller span.item span { font-weight: bold; }
 		height:25px;
 	}
 	.filter p.long{
-		width:300px;
+		width:305px;
 		margin: 0 20px 9px 0px;
 	}
 	.filter p label{
@@ -1176,6 +1176,7 @@ div.filter_roller span.item span { font-weight: bold; }
 		font-size: 12px;
 		height:23px;
 		line-height: 23px;
+		white-space: nowrap;
 	}
 	.filter p label.fc{
 		width:50px;
@@ -1196,12 +1197,11 @@ div.filter_roller span.item span { font-weight: bold; }
 		color: #000;
 		font: normal 1em Arial, sans-serif;
 		/*width:233px;*/
-		width:100%;
 		/*padding:0 5px;*/
 		height:23px;
 		line-height: 23px;
 		text-indent: 8px;
-		width:237px;
+		width:243px;
 	}
 	
 	.filter .filter_checkbox{
@@ -1259,7 +1259,7 @@ td.bx-auth-label{text-align:right; font-weight:normal;}
 td.bx-auth-label .required .required{
 	display: none;
 }
-table.bx-auth-table{margin-top:8px; }
+table.bx-auth-table{margin-top:5px; }
 table.bx-auth-table input[type="text"],
 table.bx-auth-table input[type="password"]{
 	width:250px;
@@ -1290,7 +1290,7 @@ input[type="submit"]{
 	padding:0 9px;
 	color:#fff;
 }
-table.bx-auth-table td {padding:3px; padding-bottom: 10px;}
+table.bx-auth-table td {padding:3px; padding-bottom: 7px;}
 
 div.bx-auth input.bx-auth-input {vertical-align:middle;}
 div.bx-auth span.bx-auth-secure {background-color:#FFFAE3; border:1px solid #DEDBC8; padding:2px; display:inline-block; vertical-align:middle;}
@@ -1303,8 +1303,8 @@ padding-top: 10px;
  
 .faq-item
 {
-	margin-bottom:30px;
-	margin-left: 10px;
+	margin-bottom:16px;
+	margin-left: 16px;
 }
 .faq-item  th{
 	padding-right:25px;
@@ -1312,8 +1312,21 @@ padding-top: 10px;
 }
 .faq-item th,td
 {
-	padding:0 9px 10px 0;
+	padding:0 24px 1px 0;
 	line-height: 1.45em;
+}
+.bx-registration-table{
+	margin:0 0 25px;
+}
+.bx-registration-table td #refreshCaptcha{
+	clear: both;
+}
+.bx-registration-table td img{
+	border:1px solid #000;
+	display: block;
+}
+.bx-registration-table td b{
+	display: none;
 }
 
 .faq-item .question, .faq-item th
@@ -1660,10 +1673,7 @@ div.bx-auth-line{
 }
 
 div.form #user-groups-passrequest-form label{
-	text-align: left;
-	float:left;
-	line-height: 23px;
-	width:144px;
+	
 }
 
 .twtr-widget{
@@ -1723,7 +1733,7 @@ div.form #user-groups-passrequest-form label{
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	overflow: hidden;
-	margin:0 0 8px;
+	margin:0 0 5px;
 }
 .collection-item .wrap .inside{
 	display: block;
@@ -1767,7 +1777,7 @@ div.form #user-groups-passrequest-form label{
 }
 .collection .label{
 	display: block;
-	margin:0 0 5px;
+	margin:0 0 6px;
 }
 .studio-copyright{
 	margin:10px 0 0;
@@ -1813,7 +1823,7 @@ div.form #user-groups-passrequest-form label{
 .bottom-content{
 	width:960px;
 	margin:0 auto;
-	padding: 0 0 220px;
+	padding: 0 0 186px;
 }
 
 .bottom-content .social-widgets-wrap{
@@ -1869,9 +1879,55 @@ div.form #user-groups-passrequest-form label{
 .aboutProject-placeholder{
 	text-align: center;
 	font-size: 18px;
+	margin:-2px 0 14px;
+	line-height: 1;
 }
 .aboutProject-placeholder a{
 	color:#000;
 	text-decoration: none;
 	border-bottom: 1px dashed;
+}
+
+
+
+.yashare-auto-init{
+	margin:6px 0 0 -6px;
+}
+
+
+.yashare-auto-init .b-share .b-share-form-button{
+	font-size: 11px;
+}
+
+.gfc-resultsHeader .gfc-title{
+	display: block !important;
+	height:29px;
+}
+
+
+
+.authorize-submit-cell a{
+	font-size: 12px;
+	margin-left:10px;
+	vertical-align: middle;
+	position: relative;
+	top:-2px;
+}
+#login-form{
+	font-size: 12px;
+}
+#login-form .bx-auth-table{
+	font-size: 14px;
+}
+#login-form .bottom-text{
+	padding:25px 0 0 65px;
+}
+#login-form .bottom-text br{
+	display: none;
+}
+#login-form .bottom-text big{
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	margin:0 0 5px;
 }
