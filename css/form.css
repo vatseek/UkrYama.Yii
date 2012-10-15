@@ -136,6 +136,17 @@ div.form .note
 div.form span.required
 {
 	color: red;
+	
+}
+
+div.form #user-groups-passrequest-form label{
+	position: relative;
+	display: inline;
+}
+div.form #user-groups-passrequest-form span.required{
+	position: absolute;
+	left:-8px;
+	top:0px;
 }
 
 div.form div.error label,

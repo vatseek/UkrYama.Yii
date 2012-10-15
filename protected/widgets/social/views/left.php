@@ -48,7 +48,17 @@ $(document).ready(function(){
 	});
 });	
 </script>
-	
+
+<div id="banner_ap">
+	<div class="banner_yama">
+		<span class="">Партнер:</span><br />
+		<noindex><a href="http://autoportal.ua/" target="_blank" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl;?>/banners/ap-bann-215x111.png" alt="" /></a></noindex>
+	</div>
+	<br />
+	<div id="partners">
+		SSL сертификаты и <a href="http://www.isplicense.ru/" target="_blank">лицензии ПО</a>
+	</div> 
+</div>
 	
 	<!--
 	
