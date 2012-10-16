@@ -134,10 +134,10 @@
 			<ul class="small-menu">
 				<li>Информація:</li>
 				<li><a href="#">Допомогти проекту</a></li>
-				<li><a href="#">Спільнота</a></li>
-				<li><a href="#">Партнери</a></li>
-				<li><a href="#">Подяка</a></li>
-				<li><a href="#">ЗМІ</a></li>
+				<li><a href="http://ukryama.info/" target="_blank">Спільнота</a></li>
+				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'partners'))?>">Партнери</a></li>
+				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'thanks'))?>">Подяка</a></li>
+				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'smi'))?>">ЗМІ</a></li>
 			</ul>
 		</div>
 		<div class="l-col">
