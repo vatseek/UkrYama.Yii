@@ -133,7 +133,7 @@
 			</ul>
 			<ul class="small-menu">
 				<li>Информація:</li>
-				<li><a href="#">Допомогти проекту</a></li>
+				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'donate'))?>">Допомогти проекту</a></li>
 				<li><a href="http://ukryama.info/" target="_blank">Спільнота</a></li>
 				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'partners'))?>">Партнери</a></li>
 				<li><a href="<?php echo $this->createUrl('site/page',array('view'=>'thanks'))?>">Подяка</a></li>
