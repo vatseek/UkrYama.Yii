@@ -1168,7 +1168,8 @@ div.filter_roller span.item span { font-weight: bold; }
 		width:305px;
 		margin: 0 20px 9px 0px;
 	}
-	.filter p label{
+	.filter p.short label,
+	.filter p.long label{
 		float:left;
 		width:70px;
 		padding:0 10px 0 0;

@@ -188,11 +188,11 @@ EOD
 			</p>
 			<div id="filter_rf_subject_tip" class="filter_roller"></div>
 			<p class="short">
-				<label>Статус</label>
+				<label><?php echo Yii::t("holes", "WIDGET_TYPE_DEFECT"); ?></label>
 			<?php echo $form->dropDownList($model, 'TYPE_ID', CHtml::listData( HoleTypes::model()->findAll(Array('condition'=>'published=1', 'order'=>'ordering')), 'id','name'), array('prompt'=>Yii::t("holes", "WIDGET_TYPE_DEFECT"))); ?>
 			</p>
 			<p class="long">
-				<label class="fc">Місто</label>
+				<label class="fc"><?php echo Yii::t('holes', "WIDGET_DEFAULT_CITY");?></label>
 			<?php
 			$defval= Yii::t('holes', "WIDGET_DEFAULT_CITY");
 			if ($model->ADR_CITY) $val=$model->ADR_CITY;
@@ -225,7 +225,7 @@ EOD
 			<div id="filter_city_tip" class="filter_roller"></div>
 			
 			<p class="short">
-				<label>Тип дефекту</label>
+				<label><?php echo Yii::t("holes", "WIDGET_STATUS_DEFECT"); ?></label>
 			<?php echo $form->dropDownList($model, 'STATE', $model->Allstates, array('prompt'=>Yii::t("holes", "WIDGET_STATUS_DEFECT"))); ?>
 			</p>
 			<?php if(Yii::app()->user->isModer) : ?>
