@@ -1,7 +1,7 @@
-<div id="competition">
+<!-- <div id="competition">
 <h2>Внимание! Конкурс.</h2>
 <noindex><a href="http://www.ahelp.ua/competition-rde2012.html" target="_blank" title="Конкурс УкрЯма" alt="Конкурс УкрЯма" /><img src="<?php echo Yii::app()->request->baseUrl?>/images/newroad.jpg" width="195"></a></noindex>
-</div><br />
+</div><br /> -->
 
 
 
