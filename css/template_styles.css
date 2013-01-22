@@ -1071,7 +1071,12 @@ div.news-list-mainpage
 		white-space: -pre-wrap;
 		white-space: -o-pre-wrap;
 		word-wrap: break-word;
+        margin: 0;
 	}
+
+a.arrow {
+    text-decoration: none;
+}
 
 div.news-list-mainpage a, div.news-list a
 {
@@ -2264,7 +2269,7 @@ a.button{
 	cursor: pointer;
 	padding:0 20px;
 	color:#fff !important;
-	margin:0 0 35px;
+	margin:0 0 20px;
 	border:none !important;
 }
 *+ html .printDeclaration{display:inline;zoom:1;}
@@ -2291,5 +2296,60 @@ a.button{
 }
 
 .submenu-element div.portlet {margin: 0 0 0 6px !important; padding-top: 6px; clear: both;}
-
 .admin {padding-top: 20px; clear: both;}
+
+.add-yama-container {
+    padding-top: 2px;
+    top: 82px;
+    position: absolute;
+    right: 0;
+    font-size: 1.2em;
+    z-index: 3;
+    width: 225px;
+    color: #fff;
+}
+
+.add-yama-container a {
+    background-image: url('../images/top-btn-bg.png');
+    padding: 4px 10px 6px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.rc span { line-height:     1.5em; }
+.splitter {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.likenew {
+    padding-left: 3px;
+}
+
+.days {
+    background: url('../images/cal-bg.png') no-repeat;
+    width: 50px;
+    height: 47px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 1.7;
+    display: block;
+    float: left;
+}
+
+.day-note {
+    margin: 8px;
+    font-size: 0.92em;
+    display: inline-block;
+    width: 155px;
+}
+
+.wait {
+    min-height: 50px;
+    margin-bottom: 10px;
+}
