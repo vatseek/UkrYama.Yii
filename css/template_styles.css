@@ -18,7 +18,21 @@ body {
 .clearfix:after {
     clear: both;
 }
-
+.clear {display: block;}
+.clear:before , .clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .clear {
+	display: block;
+}
+* html .clear {
+	height: 1%;
+}
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -2096,9 +2110,176 @@ div.form #user-groups-passrequest-form label{
 	width:auto;
 	float:none;
 }
+#holes-form label{
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	margin-bottom: 10px;
+}
+#holes-form .rCol.side_section{
+	float: right;
+	width: 225px;
+}
+#holes-form .rCol.side_section .add_steps{
+	display: block;
+	margin: 0 20px;
+	list-style: none;
+}
+#holes-form .rCol.side_section .add_steps li{
+	display: block;
+	border-top: solid 1px #d0d5d9;
+	margin: 30px 0;
+	text-align: center;
+}
+#holes-form .rCol.side_section .add_steps li p{
+	font-size: 12px;
+	color: #000;
+}
+#holes-form .rCol.side_section .add_steps li p span{
+	color: #637280;
+}
+#holes-form .rCol.side_section .add_steps li .step_number{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	padding: 0 10px;
+	margin: -15px 0 5px 0;
+	background: #fff;
+}
+#holes-form .rCol.side_section .add_steps li .step_number span{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	background: #b087a5;
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	padding: 6px 9px 4px 9px;
+	border-radius:15px; 
+}
+#holes-form .lCol.main_section{
+	float: left;
+	width: 715px;
+}
+#holes-form .lCol.main_section label{
+	width: 100%;
+	text-align: left;
+}
+#holes-form .lCol.main_section label .required{
+	float: none;
+}
+#holes-form .lCol.main_section select{
+	width: 475px;
+}
+#holes-form .lCol.main_section textarea{
+	width: 100%;
+	box-sizing: border-box;
+}
+#holes-form .lCol.main_section input[type="text"]{
+	width: 467px !important;
+}
+#holes-form .lCol.main_section .MultiFile-wrap{
+	float: left;
+}
+#holes-form .lCol.main_section .tip{
+	float: right;
+	font-size: 12px;
+	line-height: 1.4;
+	margin-top: -3px;
+	width: 205px;
+}
+#holes-form .lCol.main_section .form_top_bg{
+	background: #e5e9ec;
+	border-radius: 5px;
+	padding: 10px 10px 0 10px;
+	margin-bottom: 20px;
+}
+#holes-form .lCol.main_section .form_top_bg .ya_map{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+#holes-form .lCol.main_section .form_top_bg .bx-yandex-search-form{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #holes-form .rCol{
 	width:auto;
 	float:none;
+}
+
+.defect_type{
+	display: block;
+	list-style: none;
+}
+.defect_type li{
+	float: left; width: 173px;
+	margin: 8px 0;
+}
+.defect_type input[type="radio"]{
+	float: left;
+	width: auto !important;
+	margin: 2px 0 0 0;
+}
+.defect_type li label:before{
+	content: ' ';
+	display: inline-block; *display: inline; zoom: 1;
+	width: 30px;
+	height: 24px;
+	position: relative;
+	bottom: -7px;
+	left: -2px;
+	background: url(../images/defect_type.png) no-repeat;
+}
+.defect_type .type_1 label:before{
+	background-position: 0 0;
+}
+.defect_type .type_2 label:before{
+	background-position: -30px 0;
+}
+.defect_type .type_3 label:before{
+	background-position: -60px 0;
+}
+.defect_type .type_4 label:before{
+	background-position: -90px 0;
+}
+.defect_type .type_5 label:before{
+	background-position: 0 -24px;
+}
+.defect_type .type_6 label:before{
+	background-position: -30px -24px;
+}
+.defect_type .type_7 label:before{
+	background-position: -60px -24px;
+}
+.defect_type .type_1.checked label:before{
+	background-position: 0 -48px;
+}
+.defect_type .type_2.checked label:before{
+	background-position: -30px -48px;
+}
+.defect_type .type_3.checked label:before{
+	background-position: -60px -48px;
+}
+.defect_type .type_4.checked label:before{
+	background-position: -90px -48px;
+}
+.defect_type .type_5.checked label:before{
+	background-position: 0 -72px;
+}
+.defect_type .type_6.checked label:before{
+	background-position: -30px -72px;
+}
+.defect_type .type_7.checked label:before{
+	background-position: -60px -72px;
+}
+.defect_type label{
+	display: inline-block; *display: inline; zoom: 1;
+	width: auto !important;
+	margin: -10px 0 0 5px !important;
+	font-size: 12px !important;
+	white-space: nowrap;
 }
 
 #holes_selectors{
@@ -2353,4 +2534,10 @@ a.button{
 
 .wait {
     margin-bottom: 10px;
+}
+
+#user-groups-recovery-form label{
+	float: left;
+	width: 180px;
+	margin: 5px 15px 0 0;
 }
