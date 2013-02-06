@@ -63,8 +63,10 @@
 					<div class="bx-yandex-search-results" id="results_MAP_DzDvWLBsil"></div>
 				</div>	
 				<div class="f">
+					<div class="full_adress">
 						<span id="recognized_address_str" title="Субъект РФ и населённый пункт"></span>
-						<span id="other_address_str"></span>		
+						<span id="other_address_str"></span>	
+					</div>	
 					<div class="bx-yandex-view-layout">
 						<div class="bx-yandex-view-map">
 							<?php if ($model->isNewRecord) $maptype='addhole'; else $maptype='updatehole'; ?>
@@ -143,14 +145,22 @@ EOD
 		<!-- тип дефекта -->
 		<div class="f clearfix">
 			<?php echo $form->labelEx($model,'TYPE_ID'); ?>
-		<!-- 	<?php echo $form->dropDownList($model, 'TYPE_ID', CHtml::listData( HoleTypes::model()->findAll(Array('condition'=>'published=1', 'order'=>'ordering')), 'id','name')); ?>
-			<?php echo $form->error($model,'TYPE_ID'); ?>	 -->
+		 	<div class="hidden"><?php echo $form->dropDownList($model, 'TYPE_ID', CHtml::listData( HoleTypes::model()->findAll(Array('condition'=>'published=1', 'order'=>'ordering')), 'id','name')); ?></div>
 
 			<script type="text/javascript">
 				$(document).ready(function(){
-					
+					$('.defect_type li label').click(function(){
+						if ($(this).parents('li').hasClass('type_1')) {$('#Holes_TYPE_ID option[value="1"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_2')) {$('#Holes_TYPE_ID option[value="2"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_3')) {$('#Holes_TYPE_ID option[value="4"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_4')) {$('#Holes_TYPE_ID option[value="11"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_5')) {$('#Holes_TYPE_ID option[value="5"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_6')) {$('#Holes_TYPE_ID option[value="3"]').attr('selected', 'selected');}
+						if ($(this).parents('li').hasClass('type_7')) {$('#Holes_TYPE_ID option[value="0"]').attr('selected', 'selected');}
+					});
 				});
 			</script>
+
 			<ul class="defect_type clearfix">
 				<li class="type_1"><input type="radio" name="defect_type" id="type_1"><label for="type_1">Розбита дорога</label></li>
 				<li class="type_2"><input type="radio" name="defect_type" id="type_2"><label for="type_2">Яма у дворі</label></li>
@@ -160,6 +170,7 @@ EOD
 				<li class="type_6"><input type="radio" name="defect_type" id="type_6"><label for="type_6">Люк</label></li>
 				<li class="type_7"><input type="radio" name="defect_type" id="type_7"><label for="type_7">Лежачий полісмен</label></li>
 			</ul>
+			<?php echo $form->error($model,'TYPE_ID'); ?>
 		</div>
 		
 		<!-- фотки -->
