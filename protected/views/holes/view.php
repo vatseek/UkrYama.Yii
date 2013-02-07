@@ -355,19 +355,8 @@ $this->widget('application.extensions.fancybox.EFancyBox', array(
 						<iframe src="http://www.facebook.com/plugins/like.php?href=<?=Yii::app()->request->hostInfo?>/<?=Yii::app()->request->pathInfo?>&amp;layout=button_count&amp;show_faces=false&amp;width=180&amp;action=recommend&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:21px;" allowTransparency="true"></iframe>
 					</div>
 					<!-- Vkontakte like -->
-				<!--	<div id="vk_like"></div>
-					<script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", verb: 1});</script>	-->
-					<!-- Put this script tag to the <head> of your page -->
-					<script type="text/javascript" src="//vk.com/js/api/openapi.js?78"></script>
-
-					<script type="text/javascript">
-					  VK.init({apiId: API_ID, onlyWidgets: true});
-					</script>
-
 					<div id="vk_like"></div>
-					<script type="text/javascript">
-					VK.Widgets.Like("vk_like", {type: "button", height: 20});
-					</script>
+					<script type="text/javascript">VK.Widgets.Like("vk_like", {type: "button", verb: 1});</script>
 				</div>
 				<div class="share">
 					<span>Поделиться</span>
