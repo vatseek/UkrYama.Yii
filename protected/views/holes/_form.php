@@ -60,7 +60,9 @@
 							<input type="submit" value="Искать" onclick="jsYandexSearch_MAP_DzDvWLBsil.searchByAddress($('#address_inp').val()); return false;" />
 							<a style="display:none;" id="clear_result_link" href="#" onclick="clearSerchResults('MAP_DzDvWLBsil', JCBXYandexSearch_arSerachresults); document.getElementById('address_inp').value=''; return false;">Очистить</a>				
 					</div>		
-					<div class="bx-yandex-search-results" id="results_MAP_DzDvWLBsil"></div>
+					<div class="full_adress">
+						<div class="bx-yandex-search-results" id="results_MAP_DzDvWLBsil"></div>
+					</div>	
 				</div>	
 				<div class="f">
 					<div class="full_adress">
