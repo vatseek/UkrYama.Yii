@@ -471,7 +471,7 @@ class Holes extends CActiveRecord
 		//вычисляем количество дней с момента отправки
 		if(($this->STATE == 'inprogress' || $this->STATE == 'achtung') && $this->DATE_SENT && !$this->STATE != 'gibddre')
 		{
-			$this->WAIT_DAYS = 38 - ceil((time() - $this->DATE_SENT) / 86400);	
+			$this->WAIT_DAYS = 31 - ceil((time() - $this->DATE_SENT) / 86400);	
 		}
 			
 		//отмечаем яму если просроченна
