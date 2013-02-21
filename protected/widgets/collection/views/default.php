@@ -42,7 +42,7 @@
 			виправлено
 		</div>
 		<div class="collection-item how">
-			<a href="http://ukryama.com/page/donate/">Як покращити<br> ці показники?</a>
+			<a href="#">Як покращити<br> ці показники?</a>
 		</div>
 	</div>
 </div>
