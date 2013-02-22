@@ -22,7 +22,7 @@ $this->layout='//layouts/header_blank';
 		</tr>		
 	</table>	
 
-	<table class="faq-item">
+<!--	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
 			<td class="question">Где я могу скачать мобильные приложения для УкрЯмы под IPhone или Android?</td>
@@ -38,7 +38,7 @@ $this->layout='//layouts/header_blank';
 
 		</tr>		
 	</table>	
-
+-->
 	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
@@ -90,7 +90,7 @@ $this->layout='//layouts/header_blank';
 		</tr>		
 		<tr>
 			<th>A:</th>
-			<td>Пришлите на <a class="txttohtmllink" href="mailto:rossyama@gmail.com" title="Написать письмо">rossyama@gmail.com</a> фотографию исправленного участка, желательно с того же ракурса, что и раньше. Укажите номер дефекта на сайте. Мы отметим факт исправления дефекта вручную.</td>
+			<td>Пришлите на <a class="txttohtmllink" href="mailto:info@ukryama.com" title="Написать письмо">info@ukryama.com</a> фотографию исправленного участка, желательно с того же ракурса, что и раньше. Укажите номер дефекта на сайте. Мы отметим факт исправления дефекта вручную.</td>
 		</tr>		
 	</table>	
 </div>
