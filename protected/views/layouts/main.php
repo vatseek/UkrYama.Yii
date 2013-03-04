@@ -264,7 +264,7 @@
 				 
 			</p>
 			<p class="copy">Идея — <noindex><a href="http://navalny.ru/" rel="nofollow">Алексей Навальный</a></noindex>, 2011<br />
-			Хостинг — «<noindex><a href="http://ukryama.com.ua/" target="_blank" rel="nofollow">Украина</a></noindex>»<br />
+			Хостинг — «<noindex><a href="http://www.ukraine.com.ua/" target="_blank" rel="nofollow">Украина</a></noindex>»<br />
 			<span class="studio-copyright">Дизайн — веб-студия <a href="http://stfalcon.com"><span class="icon"></span>stfalcon.com</a></span>
 			Разработано в <noindex><a href="http://pixelsmedia.ru" rel="nofollow">Pixelsmedia</a> </noindex>на Yii.<br/>
 			<a href="http://novus.org.ua/" style="background:none;" class="notus-logo" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo-novus.png"></a>
