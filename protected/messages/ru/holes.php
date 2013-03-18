@@ -9,10 +9,10 @@ $MESS['WIDGET_CLEAR_DEFECT']           = 'Сбросить';
 
 
 $MESS['HOLES_STATE_FRESH_FULL']="Добавлен на сайт";
-$MESS['HOLES_STATE_INPROGRESS_FULL']="Заявление отправлено в ГИБДД";
+$MESS['HOLES_STATE_INPROGRESS_FULL']="Заявление отправлено в ГАИ";
 $MESS['HOLES_STATE_FIXED_FULL']="Исправлен";
 $MESS['HOLES_STATE_ACHTUNG_FULL']="Просрочен";
-$MESS['HOLES_STATE_GIBDDRE_FULL']="Получен ответ из ГИБДД";
+$MESS['HOLES_STATE_GIBDDRE_FULL']="Получен ответ из ГАИ";
 $MESS['HOLES_STATE_PROSECUTOR_FULL']="Жалоба отправлена в прокуратуру";
 
 $MESS['HOLES_STATE_FRESH_SHORT']="Добавлено на сайт";

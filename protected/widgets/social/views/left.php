@@ -22,37 +22,29 @@
 	<div id="feedControl">Загрузка постов…</div>
 </div>
 
-
-
-
-	
-
-	
-
-	
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#groupSwitch a').click(function(){
-	var $target = $(event.target);
-	if($target.className != "active") {
-		$('#groupSwitch a').removeClass('active');
-		$target.addClass('active');
-		$('#groupsWrap li').hide();
-		$('#groupsWrap #' + event.target.id).show();
-		if(event.target.id=="vk") {
-			$('#groupsWrap #' + event.target.id + ' #vk_groups').css('height','290px');
-			$('#groupsWrap #' + event.target.id + ' iframe').css('height','290px');
-		}
-	}
-	return false;
-	});
-});	
-</script>
-
 <div id="banner_ap">
+	<span>Партнеры:</span>
 	<div class="banner_yama">
-		<span class="">Партнер:</span><br />
-		<noindex><a href="http://autoportal.ua/" target="_blank" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl;?>/banners/ap-bann-215x111.png" alt="" /></a></noindex>
+	<br />
+		<noindex>
+		<div id="rontar_adplace_1159"></div>
+		<script type="text/javascript"><!--
+		 
+			(function (w, d, n) {
+				var ri = { rontar_site_id: 956, rontar_adplace_id: 1159, rontar_place_id: 'rontar_adplace_1159', adCode_rootUrl: 'http://adcode.rontar.com/' };
+				w[n] = w[n] || [];
+				w[n].push(
+					ri
+				);
+				var a = document.createElement('script');
+				a.type = 'text/javascript';
+				a.async = true;
+				a.src = 'http://adcode.rontar.com/rontar2_async.js?rnd=' + Math.round(Math.random() * 100000);
+				var b = document.getElementById('rontar_adplace_' + ri.rontar_adplace_id);
+				b.parentNode.insertBefore(a, b);
+			})(window, document, 'rontar_ads');
+		//--></script>
+		</noindex>
 	</div>
 	<br />
 	<div id="partners">

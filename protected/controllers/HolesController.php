@@ -54,7 +54,7 @@ class HolesController extends Controller
 		$q = $_GET['term'];
        if (isset($q)) {
            $criteria = new CDbCriteria;           
-           $criteria->params = array(':q' => trim($q).'%');
+           $criteria->params = array(':q' => '%'.trim($q).'%');
            $criteria->condition = 'name LIKE (:q)'; 
            $RfSubjects = RfSubjects::model()->findAll($criteria); 
  
@@ -394,12 +394,19 @@ class HolesController extends Controller
 	//удаление ямы пользователем
 	public function actionPersonalDelete($id)
 	{
-			$model=$this->loadChangeModel($id);				
-			$model->delete();			
-			
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_POST['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('personal'));		
+        $model=$this->loadChangeModel($id);
+        $currentUser = UserGroupsUser::model()->findByPk(Yii::app()->user->id);
+
+        if ($currentUser && (($currentUser->id == $model->user->id) || ($currentUser->level > 1))) {
+            $model->delete();
+        }
+        else {
+            throw new CHttpException(403,'Доступ запрещен.');
+        }
+
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if(!isset($_POST['ajax']))
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('personal'));
 	}	
 	
 	//форма ГИБДД
@@ -511,11 +518,10 @@ class HolesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		
 		$this->layout='//layouts/header_default';
 		
 		//Если нет таблиц в базе редиректим на контроллер миграции
-		if(Holes::getDbConnection()->getSchema()->getTable(Holes::tableName())===null)
+		if(Holes::model()->getDbConnection()->getSchema()->getTable(Holes::model()->tableName())===null)
 			$this->redirect(array('migration/index'));
 	
 		$model=new Holes('search');		
@@ -525,8 +531,8 @@ class HolesController extends Controller
 		if(isset($_POST['Holes']) || isset($_GET['Holes']))
 			$model->attributes=isset($_POST['Holes']) ? $_POST['Holes'] : $_GET['Holes'];
 			if ($model->ADR_CITY=="Город") $model->ADR_CITY='';
-		$dataProvider=$model->search();	
-		
+		$dataProvider=$model->search();
+
 		$this->render('index',array(
 			'model'=>$model,
 			'dataProvider'=>$dataProvider,

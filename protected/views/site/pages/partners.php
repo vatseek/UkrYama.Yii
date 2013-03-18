@@ -1,8 +1,11 @@
-<?php $this->pageTitle=Yii::app()->name . ' :: Партнёры';?>
+<?php
+    $this->pageTitle=Yii::app()->name . ' :: Партнёры';
+    $this->layout='//layouts/header_blank';
+?>
 
  <h2>Наши партнеры:</h2>
  		
-  <ul class="default"> 		<a href="http://facebook.com/Orobets.Lesya" target="_blank" >Леся Оробец</a> &mdash; пишет депутатские обращения в ГПУ, когда службы не реагируют на жалобы пользователей &laquo;УкрЯмы&raquo;;
+  <ul class="default"> 		<a href="https://www.facebook.com/lesyaorobets" target="_blank" >Леся Оробец</a> &mdash; пишет депутатские обращения в ГПУ, когда службы не реагируют на жалобы пользователей &laquo;УкрЯмы&raquo;;
     <br />
    		«<a href="http://pravoved.in.ua/" target="_blank" >Правовед</a>» — правовая литература Украины. Знай свои права и обязанности;
     <br />

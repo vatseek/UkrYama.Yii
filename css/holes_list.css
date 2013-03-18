@@ -99,12 +99,13 @@
 	width:7px;
 	height:7px;
 	vertical-align: middle;
-	background: url(../images/dots.png) 0 0 no-repeat;
+	background: url(../images/dots.png) no-repeat;
 	text-indent: -9999px;
 }
-.holes_list .state_fresh {  }
-.holes_list .state_inprogress { background-position: 0 100%; }
-.holes_list .state_gibddre { background-position: 0 100%; } 
+.status_span.state_fresh { background-position: 0 0; }
+.status_span.state_inprogress { background-position: 0 -8px; }
+.status_span.state_gibddre, .status_span.state_fixed { background-position: 0 -16px; }
+.status_span.state_achtung { background-position: 0 -24px; }
 
 .pagination a, .pagination span {
 	margin-right: 1em;
@@ -146,13 +147,16 @@ div#ymapcontainer_big_map { height: 600px; width: 1000px; }
 
 .state_block.checked {background-color: #ddd;}
 
-#holes_select_list{position: absolute; }
+#holes_select_list{position: static; }
 #scrollcontainer{position: absolute; top:0px!important;}
 .holes_select_list_box{background-color: #e5e9ec; width: 200px; padding:10px;
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	margin:0 0 3px;
+}
+.holes_select_list_box br + br{
+	display: none;
 }
 .hole_check{position: absolute; z-index: 1; top:5px; left:5px;}
 
