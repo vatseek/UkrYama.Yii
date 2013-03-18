@@ -88,7 +88,7 @@ class Holes extends CActiveRecord
 			array('COMMENT1, COMMENT2, COMMENT_GIBDD_REPLY, deletepict, upploadedPictures, request_gibdd, showUserHoles', 'safe'),	
 			array('upploadedPictures', 'file', 'types'=>'jpg, jpeg, png, gif','maxFiles'=>10, 'allowEmpty'=>true, 'on' => 'update, import, fix'),
 			array('upploadedPictures', 'file', 'types'=>'jpg, jpeg, png, gif','maxFiles'=>10, 'allowEmpty'=>false, 'on' => 'insert'),
-			array('upploadedPictures', 'required', 'on' => 'insert', 'message' => 'Необходимо загрузить фотографии'),			
+			//array('upploadedPictures', 'required', 'on' => 'insert', 'message' => 'Необходимо загрузить фотографии'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID, USER_ID, LATITUDE, LONGITUDE, ADDRESS, STATE, DATE_CREATED, DATE_SENT, DATE_STATUS, COMMENT1, COMMENT2, TYPE_ID, ADR_SUBJECTRF, ADR_CITY, COMMENT_GIBDD_REPLY, GIBDD_REPLY_RECEIVED, PREMODERATED, DATE_SENT_PROSECUTOR', 'safe', 'on'=>'search'),
@@ -258,7 +258,7 @@ class Holes extends CActiveRecord
 			if(!$_file->hasError)
 			{	
 				$imgname=rand().'.jpg';
-				$image = $this->imagecreatefromfile($_file->getTempName(), &$_image_info);
+				$image = $this->imagecreatefromfile($_file->getTempName(), $_image_info);
 				if(!$image)
 				{
 					$this->addError('pictures',Yii::t('errors', 'GREENSIGHT_ERROR_UNSUPPORTED_IMAGE_TYPE'));
@@ -318,7 +318,7 @@ class Holes extends CActiveRecord
 
 	public static function imagecreatefromfile($file_name, &$_image_info = array())
 	{
-		$_image_info = getimagesize($file_name, &$_image_additional_info);
+		$_image_info = getimagesize($file_name, $_image_additional_info);
 		$_image_info['additional'] = $_image_additional_info;
 		switch($_image_info['mime'])
 		{
@@ -471,7 +471,7 @@ class Holes extends CActiveRecord
 		//вычисляем количество дней с момента отправки
 		if(($this->STATE == 'inprogress' || $this->STATE == 'achtung') && $this->DATE_SENT && !$this->STATE != 'gibddre')
 		{
-			$this->WAIT_DAYS = 38 - ceil((time() - $this->DATE_SENT) / 86400);	
+			$this->WAIT_DAYS = 31 - ceil((time() - $this->DATE_SENT) / 86400);	
 		}
 			
 		//отмечаем яму если просроченна
@@ -544,15 +544,15 @@ class Holes extends CActiveRecord
 			'LATITUDE' => 'Latitude',
 			'LONGITUDE' => 'Longitude',
 			'ADDRESS' => 'Адрес дефекта',
-			'gibdd_id'=>'Отдел ГИБДД',
+			'gibdd_id'=>'Отдел ГАИ',
 			'STATE' => 'Статус',
 			'DATE_CREATED' => 'Дата создания',
-			'DATE_SENT' => 'Дата отправки в ГИБДД',
+			'DATE_SENT' => 'Дата отправки в ГАИ',
 			'DATE_STATUS' => 'Date Status',
 			'COMMENT1' => 'Комментарии',
 			'COMMENT2' => 'Комментарии',
 			'TYPE_ID' => 'Тип дефекта',
-			'ADR_SUBJECTRF' => 'Субъект РФ',
+			'ADR_SUBJECTRF' => 'Область',
 			'ADR_CITY' => 'Город',
 			'COMMENT_GIBDD_REPLY' => 'Comment Gibdd Reply',
 			'GIBDD_REPLY_RECEIVED' => 'Gibdd Reply Received',
@@ -560,7 +560,7 @@ class Holes extends CActiveRecord
 			'NOT_PREMODERATED' => 'только непроверенные',
 			'DATE_SENT_PROSECUTOR' => 'Date Sent Prosecutor',
 			'deletepict'=>'Удалить фотографию?',
-			'replуfiles'=>'Необходимо добавить отсканированный ответ из ГИБДД',
+			'replуfiles'=>'Необходимо добавить отсканированный ответ из ГАИ',
 			'upploadedPictures'=>$this->scenario=='fix' ? 'Желательно добавить фотографии исправленного дефекта' : 'Нужно загрузить фотографии'
 		);
 	}

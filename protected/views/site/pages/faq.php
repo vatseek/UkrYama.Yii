@@ -1,6 +1,7 @@
 <?
 $this->pageTitle=Yii::app()->name . ' - FAQ';
-$this->layout='//layouts/header_default_without_add';
+//$this->layout='//layouts/header_default_without_add';
+$this->layout='//layouts/header_blank';
 ?>
 <div class="lCol">
 <?php $this->widget('application.widgets.news.newsWidget'); ?>
@@ -21,7 +22,7 @@ $this->layout='//layouts/header_default_without_add';
 		</tr>		
 	</table>	
 
-	<table class="faq-item">
+<!--	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
 			<td class="question">Где я могу скачать мобильные приложения для УкрЯмы под IPhone или Android?</td>
@@ -37,7 +38,7 @@ $this->layout='//layouts/header_default_without_add';
 
 		</tr>		
 	</table>	
-
+-->
 	<table class="faq-item">
 		<tr>
 			<th>Q:</th>
@@ -46,7 +47,7 @@ $this->layout='//layouts/header_default_without_add';
 		<tr>
 			<th>A:</th>
 			<td>
-			<p>Наши официальные группы: <a href="http://vkontakte.ru/ukryama" title="УкрЯма ВКонтакте" target="_blank" >ВКонтакте</a>, <a href="https://www.facebook.com/ukryama" title="Фейсбук УкрЯмы" target="_blank" >Facebook</a>, <a href="https://twitter.com/#!/ukryama" title="Твиттер УкрЯмы" target="_blank" >Twitter</a>. Пока всё.</p>
+			<p>Наши официальные группы: <a href="http://vk.com/ukryama" title="УкрЯма ВКонтакте" target="_blank" >ВКонтакте</a>, <a href="https://www.facebook.com/ukryama" title="Фейсбук УкрЯмы" target="_blank" >Facebook</a>, <a href="https://twitter.com/#!/ukryama" title="Твиттер УкрЯмы" target="_blank" >Twitter</a>. Пока всё.</p>
 			</td>
 
 		</tr>		
@@ -89,7 +90,7 @@ $this->layout='//layouts/header_default_without_add';
 		</tr>		
 		<tr>
 			<th>A:</th>
-			<td>Пришлите на <a class="txttohtmllink" href="mailto:rossyama@gmail.com" title="Написать письмо">rossyama@gmail.com</a> фотографию исправленного участка, желательно с того же ракурса, что и раньше. Укажите номер дефекта на сайте. Мы отметим факт исправления дефекта вручную.</td>
+			<td>Пришлите на <a class="txttohtmllink" href="mailto:info@ukryama.com" title="Написать письмо">info@ukryama.com</a> фотографию исправленного участка, желательно с того же ракурса, что и раньше. Укажите номер дефекта на сайте. Мы отметим факт исправления дефекта вручную.</td>
 		</tr>		
 	</table>	
 </div>

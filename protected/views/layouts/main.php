@@ -16,7 +16,7 @@
 
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?22"></script>
 
-<script type="text/javascript">VK.init({apiId: 2232074, onlyWidgets: true});</script>
+<script type="text/javascript">VK.init({apiId: 2472807, onlyWidgets: true});</script>
 
 </head>
 
@@ -102,11 +102,19 @@
 			<span class="placeholder"><?php echo Yii::t("template", "FIND_BY_ADRESS");?></span>
 	</form>
 			</div>
+            <?php if ((Yii::app()->getController()->getAction()->controller->getId() != 'holes') || (Yii::app()->getController()->getAction()->controller->action->id != 'index')): ?>
+                <div class="add-yama-container">
+                    <?php echo CHtml::link('<span>Додати дефект</span>',Array('/holes/add')); ?>
+                </div>
+            <?php endif;?>
 			<div class="auth">
 			<?php if(!$this->user->isGuest) : ?>
-					<?php echo CHtml::link('<img src="'.Yii::app()->request->baseUrl.'/images/logout.png" alt="'.Yii::t("template", "LOGOUT").'" />',Array('/site/logout'),Array('title'=>Yii::t("template", "LOGIN"))); ?>
 					<div class="name">
-						<p><?php echo CHtml::link($this->user->fullname,Array('/holes/personal')); ?></p><span class="grad"></span>
+						<p>
+                            <?php echo CHtml::link($this->user->fullname,Array('/holes/personal')); ?>
+                            <?php echo CHtml::link('',Array('/site/logout'),Array('title'=>Yii::t("template", "LOGOUT"), 'class' => 'logout')); ?>
+                        </p>
+                        <span class="grad"></span>
 					</div>
 				<?php else: ?>
 					<?php echo CHtml::link(Yii::t("template", "LOGIN"),Array('/holes/personal'),Array('title'=>Yii::t("template", "LOGOUT"), 'class'=>'profileBtn')); ?>
@@ -192,9 +200,27 @@
 			<div class="social-widgets-wrap">
 				<div class="socialGroups">
 		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#groupSwitch a').click(function(){
+				var $target = $(event.target);
+				if($target.className != "active") {
+					$('#groupSwitch a').removeClass('active');
+					$target.addClass('active');
+					$('#groupsWrap li').hide();
+					$('#groupsWrap #' + event.target.id).show();
+					if(event.target.id=="vk") {
+						$('#groupsWrap #' + event.target.id + ' #vk_groups').css('height','290px');
+						$('#groupsWrap #' + event.target.id + ' iframe').css('height','290px');
+					}
+				}
+				return false;
+				});
+			});	
+		</script>
 			<ul id="groupSwitch">
-				<li><noindex><a href="/" id="fb" class="active">Faceboo<span class="l"></span><span class="r"></span>k</a></noindex></li>
-				<li><noindex><a href="/" id="vk">Вконтакте<span class="l"></span><span class="r"></span></a></noindex></li>
+				<li><noindex><a href="#" id="fb" class="active">Faceboo<span class="l"></span><span class="r"></span>k</a></noindex></li>
+				<li><noindex><a href="#" id="vk">Вконтакте<span class="l"></span><span class="r"></span></a></noindex></li>
 			</ul>
 			<ul id="groupsWrap">
 					<li id="fb">
@@ -237,53 +263,44 @@
 				<noindex><a class="rs" target="_blank" href="http://rosyama.ru/" title="РосЯма">РосЯма</a></noindex><br>Яму мне запили!<br/>			
 				 
 			</p>
-			<p class="copy">Идея - <noindex><a href="http://navalny.ru/">Алексей Навальный</a></noindex>, 2011<br />
-			Хостинг — «<noindex><a href="http://ihc.com.ua/" target="_blank">ihc</a></noindex>»<br />
-			<span class="studio-copyright">Дизайн — веб-студия </noindex><a href="http://stfalcon.com"><span class="icon"></span>stfalcon.com</a></noindex></span>
-			Разработано в <a href="http://pixelsmedia.ru">Pixelsmedia</a> на Yii.<br/>
+			<p class="copy">Идея — <noindex><a href="http://navalny.ru/" rel="nofollow">Алексей Навальный</a></noindex>, 2011<br />
+			Хостинг — «<noindex><a href="http://www.ukraine.com.ua/" target="_blank" rel="nofollow">Украина</a></noindex>»<br />
+			<span class="studio-copyright">Дизайн — веб-студия <a href="http://stfalcon.com"><span class="icon"></span>stfalcon.com</a></span>
+			Разработано в <noindex><a href="http://pixelsmedia.ru" rel="nofollow">Pixelsmedia</a> </noindex>на Yii.<br/>
 			<a href="http://novus.org.ua/" style="background:none;" class="notus-logo" target="_blank"><img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo-novus.png"></a>
 			</p>
+			
+								<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter9811282 = new Ya.Metrika({id:9811282,
+							webvisor:true,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/9811282" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
 			<?php if($this->beginCache('countHoles', array('duration'=>3600))) { ?>
-			<!--<?php $this->widget('application.widgets.collection.collectionWidget'); ?>-->
-			<div class="collection">
-				<span class="label">Наша колекція нараховує:</span>
-				<div class="collection-counter-wrap">
-					<div class="collection-item">
-						<div class="wrap">
-							<span class="inside">
-								<span>1</span>
-								<span>2</span>
-								<span>3</span>
-								<span>4</span>
-							</span>
-						</div>
-						дефекти
-					</div>
-					<div class="collection-item">
-						<div class="wrap">
-							<span class="inside">
-								<span>1</span>
-								<span>2</span>
-								<span>3</span>
-							</span>
-						</div>
-						в ДАЇ
-					</div>
-					<div class="collection-item">
-						<div class="wrap">
-							<span class="inside">
-								<span>1</span>
-								<span>2</span>
-								<span>3</span>
-							</span>
-						</div>
-						виправлено
-					</div>
-					<div class="collection-item how">
-						<a href="#">Як покращити<br> ці показники?</a>
-					</div>
-				</div>
-			</div>			
+			
+			<?php $this->widget('application.widgets.collection.collectionWidget'); ?>		
+
 			<?php $this->endCache(); } ?>
 			<p class="friends">Информация:<br />
 				<a href="http://ukryama.info" target="_blank">Сообщество</a><br />
@@ -318,6 +335,15 @@
 	
 		</script>
 	<?endif?>
-	
+		<div class="insape"><?php 
+			if (!defined('_SAPE_USER')){
+		   define('_SAPE_USER', 'f127747a52619313d55480e54fe0ca6a'); 
+			}
+			require_once($_SERVER['DOCUMENT_ROOT'].'/'._SAPE_USER.'/sape.php'); 
+			$o['charset'] = 'UTF-8';
+			$sape = new SAPE_client($o);
+			echo "<a href='http://ukryama.com/news/?ELEMENT_ID=431'>Реклама</a>: ";
+			echo $sape->return_links();
+		?></div>
 	</body>
 	</html>
