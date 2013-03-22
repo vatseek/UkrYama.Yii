@@ -9,3 +9,4 @@ bugs
 protected/runtime/*
 .idea/
 /protected/config/appConfig.php
+robots.txt
