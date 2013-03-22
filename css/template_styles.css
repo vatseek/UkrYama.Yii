@@ -1647,7 +1647,7 @@ color: rgb(0, 128, 0);
 				border-bottom: 2px solid #eef2f5;
 				display: none;
 				height: 290px;
-				margin-bottom: -22px;
+				margin: 21px -1px 22px;
 				top: -22px;
 			}
 
