@@ -98,7 +98,7 @@ return array(
 
 		),
 		// uncomment the following to enable URLs in path-format
-        /*
+        
         'urlManager'=>array(
 			//'baseUrl'=>'/',
 			'urlFormat'=>'path',
@@ -123,7 +123,7 @@ return array(
 			),
 
 		),
-            */
+            
             
 
 		'image'=>array(
